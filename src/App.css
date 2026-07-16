@@ -71,6 +71,14 @@
         font-family: var(--kt-fonts-body);
         background: transparent;
         color: #fff;
+        opacity: 0.85;
+      }
+
+      .header:hover {
+        opacity: 1;
+        background: rgba(148, 55, 39, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
       }
 
       .header.header-scrolled {
@@ -80,7 +88,8 @@
         box-shadow: 
           0 4px 30px rgba(0, 0, 0, 0.15),
           0 1px 3px rgba(0, 0, 0, 0.1),
-          inset 0 1px 0 rgba(255, 255, 255, 0.15);
+          inset 0 1px 0 rgba(48, 111, 109, 0.15);
+        opacity: 1;
       }
 
       .header-container {
@@ -193,7 +202,7 @@
       }
 
       .header.header-scrolled .header-title {
-        color: #1a1a2e;
+        color: #ffffff;
       }
 
       @media (min-width: 62em) {
@@ -211,7 +220,7 @@
       }
 
       .header.header-scrolled .header-subtitle {
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba(255, 255, 255, 0.75);
       }
 
       @media (min-width: 62em) {
@@ -268,7 +277,7 @@
       }
 
       .header.header-scrolled .header-cm-text {
-        color: rgba(0, 0, 0, 0.75);
+        color: rgba(255, 255, 255, 0.9);
       }
 
       .header-top-right {
@@ -377,7 +386,7 @@
       .header.header-scrolled .header-nav {
         border-top-color: rgba(0, 0, 0, 0.08);
         border-bottom-color: rgba(0, 0, 0, 0.08);
-        background: rgba(255, 255, 255, 0.95);
+        background: #ffffff;
       }
 
       .header-nav-list {
@@ -401,7 +410,7 @@
         padding: 0.7rem 0.85rem;
         font-size: 0.82rem;
         font-weight: 600;
-        color: rgba(255, 255, 255, 0.85);
+        color: #000000;
         text-decoration: none;
         transition: all 0.3s ease;
         white-space: nowrap;
@@ -431,7 +440,7 @@
         transform: translateX(-50%) scaleX(0);
         width: 60%;
         height: 2px;
-        background: #ff9d00;
+        background: #ffffff;
         transition: transform 0.3s ease;
       }
 
@@ -441,11 +450,11 @@
       }
 
       .header-nav-link:hover {
-        color: #ff9d00;
+        color: #fff8f6;
       }
 
       .header-nav-link.active {
-        color: #ff9d00;
+        color: #f7f0ef;
       }
 
       .header.header-scrolled .header-nav-link {
@@ -454,7 +463,7 @@
 
       .header.header-scrolled .header-nav-link:hover,
       .header.header-scrolled .header-nav-link.active {
-        color: #ff9d00;
+        color: #943727;
       }
 
       /* Hamburger */

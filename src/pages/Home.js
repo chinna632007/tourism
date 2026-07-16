@@ -156,7 +156,7 @@ const StunningWonders = () => {
     <section className="section">
       <div className="container">
         <div className="container-xl" style={{ margin: '0 auto' }}>
-          <SectionHeader heading="East godavari's Stunning Wonders" description="Enjoy the magnificent and varied allure of Land of Riches" />
+          <SectionHeader heading="East Godavari's Stunning Wonders" description="Enjoy the magnificent and varied allure of Land of Riches" />
         </div>
         <div className="wonders-grid">
           {wonders.map((item, i) => (
