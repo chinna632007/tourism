@@ -11,7 +11,6 @@ import ExperiencesPage from './pages/ExperiencesPage';
 import ExperienceDetail from './pages/ExperienceDetail';
 import DestinationDetailPage from './pages/DestinationDetailPage';
 import PlanTrip from './pages/PlanTrip';
-import EBrochures from './pages/EBrochures';
 import PhotoGallery from './pages/PhotoGallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -90,12 +89,12 @@ const Header = () => {
 
 // ============ FOOTER ============
 const Footer = () => (
-  <footer className="footer" style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)', padding: '4rem 0 2rem' }}>
+  <footer className="footer" style={{ background: 'linear-gradient(135deg, #090909 0%, #4e1e1e 100%)', padding: '4rem 0 2rem' }}>
     <div className="container">
       <div style={{ 
         textAlign: 'center', 
         padding: '2.5rem 2rem',
-        background: 'rgba(21, 20, 20, 0)',
+        background: 'rgba(122, 31, 31, 0)',
         borderRadius: '0.5rem',
         backdropFilter: 'blur(10px)',
         maxWidth: '1000px',
@@ -277,8 +276,7 @@ function AppContent() {
           <Route path="/experiences" element={<ExperiencesPage />} />
           <Route path="/experience/:category/:experienceId" element={<ExperienceDetail />} />
           <Route path="/destination-page/:id" element={<DestinationDetailPage />} />
-          <Route path="/plan-trip" element={<PlanTrip />} />
-          <Route path="/ebrochures" element={<EBrochures />} />
+          <Route path="/plan-trip" element={<PlanTrip />} />          
           <Route path="/photo-gallery" element={<PhotoGallery />} />
           <Route path="/video-gallery" element={<PhotoGallery />} />
           <Route path="/about" element={<About />} />
