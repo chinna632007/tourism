@@ -2156,7 +2156,8 @@
       }
       
       /* But hero sections within non-home pages should be full-viewport height */
-      main:not(.home-page) .hero-section {
+      main:not(.home-page) .hero-section,
+      main:not(.home-page) .spirituality-hero {
         height: 100vh;
         margin-top: -140px;
       }
@@ -2166,7 +2167,8 @@
           padding-top: 80px;
         }
         
-        main:not(.home-page) .hero-section {
+        main:not(.home-page) .hero-section,
+        main:not(.home-page) .spirituality-hero {
           margin-top: -80px;
         }
       }

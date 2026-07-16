@@ -81,6 +81,26 @@ const Spirituality = () => {
           </video>
         </div>
         <div className="spirituality-hero-overlay"></div>
+        <div className="hero-content">
+          <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div className="hero-content-inner">
+              <div className="hero-content-body">
+                <hr aria-orientation="vertical" className="hero-divider" />
+                <h6 className="hero-category">Spiritual Journey</h6>
+                <h1 className="hero-title">
+                  Discover the Divine
+                  <span className="hero-highlight"> Soul of East Godavari</span>
+                </h1>
+                <p className="hero-description">
+                  Explore ancient temples, serene churches, and peaceful mosques in East Godavari.
+                </p>
+                <Link to="/destinations" className="hero-btn">
+                  Explore More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Category Cards Section */}
