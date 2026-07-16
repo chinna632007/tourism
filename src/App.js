@@ -37,52 +37,81 @@ import LivingFacilities from './pages/LivingFacilities';
 // ============ HEADER ============
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/destinations', label: 'Destinations' },
+    { to: '/experiences', label: 'Experiences' },
+    { to: '/spirituality', label: 'Spirituality' },
+    { to: '/plan-trip', label: 'Plan your trip' },
+    { to: '/trending-places', label: 'Help' },
+    { to: '/contact', label: 'Emergency' },
+  ];
+
   return (
-    <header className="header" style={{ paddingTop: '0.5rem', paddingBottom: '0.5rem' }}>
-      <div className="container">
-        <Link to="/" className="header-logo">
-          <div className="logo-container">
-            <img
-              src={apLogo}
-              alt="East Godavari Tourism"
-              className="logo-image"
-            />
+    <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
+      <div className="header-top">
+        <div className="header-container">
+          <div className="header-top-left">
+            <img src={apLogo} alt="East Godavari Tourism" className="header-emblem" />
+            <div className="header-title-block">
+              <h1 className="header-title">East Godavari Tourism</h1>
+              <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
+            </div>
           </div>
-        </Link>
-        
-        {/* Hamburger menu button */}
-        <button 
-          className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
 
-        {/* Overlay for mobile menu */}
-        {isMobileMenuOpen && (
-          <div 
-            className="nav-overlay active"
-            onClick={() => setIsMobileMenuOpen(false)}
-          ></div>
-        )}
+          <div className="header-top-center">
+            <Link to="/" className="header-logo-link">
+              <img src={apLogo} alt="East Godavari" className="header-logo-img" />
+            </Link>
+          </div>
 
-        <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <ul>
-            <li><Link to="/" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-            <li><Link to="/destinations" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Destinations</Link></li>
-            <li><Link to="/experiences" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Experiences</Link></li>
-            <li><Link to="/spirituality" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Spirituality</Link></li>
-            <li><Link to="/plan-trip" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Plan your trip</Link></li>
-            <li><Link to="/trending-places" style={{ color: 'black', textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>Help</Link></li>
-            <li><Link to="/contact" style={{ color: 'black', textDecoration: 'none', fontWeight: '600' }} onClick={() => setIsMobileMenuOpen(false)}>Emergency</Link></li>
-          </ul>
-        </nav>
+          <div className="header-top-right">
+            <Link to="/plan-trip" className="header-btn header-btn-primary">Plan Your Trip</Link>
+            <Link to="/contact" className="header-btn header-btn-outline">Contact Us</Link>
+          </div>
+
+          <button
+            className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
+
+      <nav className={`header-nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
+        <div className="header-container">
+          <ul className="header-nav-list">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className={`header-nav-link ${location.pathname === link.to ? 'active' : ''}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      {isMobileMenuOpen && (
+        <div className="nav-overlay active" onClick={() => setIsMobileMenuOpen(false)}></div>
+      )}
     </header>
   );
 };
