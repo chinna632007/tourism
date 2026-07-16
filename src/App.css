@@ -103,16 +103,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        min-height: 70px;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        min-height: 90px;
       }
 
       @media (min-width: 48em) {
         .header-top .header-container {
-          padding-top: 0.65rem;
-          padding-bottom: 0.65rem;
-          min-height: 80px;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          min-height: 110px;
         }
       }
 
@@ -182,44 +182,57 @@
         }
       }
 
-      /* Center: Logo */
+      /* Right: Buttons */
+      /* Center: CM Photo + Name */
       .header-top-center {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      .header-logo-link {
+      @media (min-width: 64em) {
+        .header-top-center {
+          display: flex;
+        }
+      }
+
+      .header-cm {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        text-decoration: none;
+        gap: 0.25rem;
       }
 
-      .header-logo-img {
-        height: 50px;
+      .header-cm-img {
+        height: 52px;
         width: auto;
         object-fit: contain;
-        filter: brightness(0) invert(1);
-        transition: all 0.3s ease;
+        border-radius: 9999px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.1);
       }
 
-      .header.header-scrolled .header-logo-img {
-        filter: none;
+      .header-cm-text {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.9);
+        white-space: nowrap;
       }
 
-      @media (min-width: 48em) {
-        .header-logo-img {
-          height: 60px;
-        }
+      .header.header-scrolled .header-cm-img {
+        border-color: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.04);
       }
 
-      @media (min-width: 62em) {
-        .header-logo-img {
-          height: 65px;
-        }
+      .header.header-scrolled .header-cm-text {
+        color: rgba(0, 0, 0, 0.75);
       }
 
-      /* Right: Buttons */
       .header-top-right {
         display: none;
         align-items: center;
@@ -233,8 +246,8 @@
       }
 
       .header-btn {
-        padding: 0.5rem 1.25rem;
-        font-size: 0.8rem;
+        padding: 0.45rem 1rem;
+        font-size: 0.78rem;
         font-weight: 700;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -281,8 +294,8 @@
       .header-nav {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        background: rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px);
+        background: rgba(67, 35, 35, 0.15);
+        backdrop-filter: blur(11px);
         transition: all 0.3s ease;
         display: none;
       }
@@ -2152,24 +2165,23 @@
 
       /* Non-home pages need top padding for fixed header */
       main:not(.home-page) {
-        padding-top: 140px;
+        padding-top: 150px;
       }
       
-      /* But hero sections within non-home pages should be full-viewport height */
       main:not(.home-page) .hero-section,
       main:not(.home-page) .spirituality-hero {
         height: 100vh;
-        margin-top: -140px;
+        margin-top: -150px;
       }
       
       @media (max-width: 767px) {
         main:not(.home-page) {
-          padding-top: 80px;
+          padding-top: 110px;
         }
         
         main:not(.home-page) .hero-section,
         main:not(.home-page) .spirituality-hero {
-          margin-top: -80px;
+          margin-top: -110px;
         }
       }
 
@@ -2179,7 +2191,7 @@
        }
        
        main:not(.home-page) {
-         padding-top: 75px;
+         padding-top: 110px;
        }
      }
 

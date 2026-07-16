@@ -69,6 +69,13 @@ const Header = () => {
             </div>
           </div>
 
+          <div className="header-top-center">
+            <div className="header-cm">
+              <img src="/cm.jpg" alt="CM N. Chandrababu Naidu" className="header-cm-img" />
+              <span className="header-cm-text">Sri N. Chandrababu Naidu</span>
+            </div>
+          </div>
+
           <div className="header-top-right">
             <Link to="/plan-trip" className="header-btn header-btn-primary">Plan Your Trip</Link>
             <Link to="/contact" className="header-btn header-btn-outline">Contact Us</Link>
