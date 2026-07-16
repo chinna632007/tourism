@@ -63,17 +63,11 @@ const Header = () => {
       <div className="header-top">
         <div className="header-container">
           <div className="header-top-left">
-            <img src={apLogo} alt="East Godavari Tourism" className="header-emblem" />
+            <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
             <div className="header-title-block">
               <h1 className="header-title">East Godavari Tourism</h1>
               <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
             </div>
-          </div>
-
-          <div className="header-top-center">
-            <Link to="/" className="header-logo-link">
-              <img src={apLogo} alt="East Godavari" className="header-logo-img" />
-            </Link>
           </div>
 
           <div className="header-top-right">

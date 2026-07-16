@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      <div className="hero-video-wrapper">u
+      <div className="hero-video-wrapper">
         <video
           key={slide.video}
           height="100%" width="100%"
