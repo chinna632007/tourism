@@ -78,7 +78,7 @@ const Header = () => {
 
           <div className="header-top-right">
             <Link to="/plan-trip" className="header-btn header-btn-primary">Plan Your Trip</Link>
-            <Link to="/contact" className="header-btn header-btn-outline">Contact Us</Link>
+            <Link to="/contact" className="header-btn header-btn-primary">Contact Us</Link>
           </div>
 
           <button
@@ -199,13 +199,13 @@ const Footer = () => (
             style={{ 
               display: 'inline-flex',
               padding: '0.875rem 2.5rem',
-              background: 'rgba(255, 255, 255, 0.15)',
+              background: 'linear-gradient(135deg, #ff9d00 0%, #ffb347 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: '50px',
               fontWeight: '600',
               fontSize: '1.1rem',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
+              boxShadow: '0 4px 15px rgba(255, 157, 0, 0.4)',
               transition: 'all 0.3s ease',
               alignItems: 'center',
               gap: '0.5rem'
