@@ -1,0 +1,43 @@
+/* ===== EXPERIENCE DETAIL PAGE ===== */
+
+.experience-detail-page {
+  min-height: 100vh;
+}
+
+/* Tab Navigation */
+.experience-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.experience-tab {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.experience-tab.active {
+  background: #FF9D00;
+  color: white;
+  border-color: #FF9D00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-tabs {
+    gap: 1rem;
+  }
+  
+  .experience-tab {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+}

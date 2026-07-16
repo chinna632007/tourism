@@ -1,0 +1,349 @@
+/* ===== TRENDING PLACES - MODERN CARD DESIGN ===== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatParticle {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+}
+
+.trending-page {
+  padding-top: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fc 0%, #f0f4f8 100%);
+}
+
+/* ===== HERO SECTION ===== */
+.trending-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f0f2a 100%);
+}
+
+.trending-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 157, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.trending-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 1.5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.trending-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trending-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 0%, #FF9D00 50%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trending-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-button-wrapper {
+  padding: 2rem 0 1rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.trending-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(255, 157, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  letter-spacing: 0.5px;
+}
+
+.trending-back-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(255, 157, 0, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.trending-back-button svg {
+  transition: transform 0.3s ease;
+}
+
+.trending-back-button:hover svg {
+  transform: translateX(-4px);
+}
+
+/* ===== PLACES GRID ===== */
+.trending-places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trending-place-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  position: relative;
+  min-height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: inherit;
+}
+
+.trending-place-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Card Image - Like Experience Cards */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.trending-place-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.trending-place-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.trending-place-card:hover .card-image-overlay {
+  opacity: 1;
+}
+
+/* Card Badge */
+.card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #FF9D00;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trending-place-card:hover .card-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Content */
+.trending-place-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
+  flex: 1;
+  position: relative;
+  background: white;
+}
+
+.card-content-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 157, 0, 0.08);
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  color: #FF9D00;
+}
+
+.card-content-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.trending-place-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: #1a1a2e;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.trending-place-card:hover .trending-place-title {
+  background: linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trending-place-description {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Explore Button */
+.card-explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background: #f8f9fc;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.card-explore-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.trending-place-card:hover .card-explore-btn {
+  background: linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%);
+  color: #ffffff;
+}
+
+.trending-place-card:hover .card-explore-btn svg {
+  transform: translateX(4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .trending-places-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .trending-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .trending-hero p {
+    font-size: 1rem;
+  }
+
+  .trending-places-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-hero {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .trending-hero h1 {
+    font-size: 2rem;
+  }
+
+  .trending-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .trending-places-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .trending-back-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

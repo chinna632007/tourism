@@ -1,0 +1,377 @@
+/* ===== PLAN TRIP PAGE - STYLISH MODERN DESIGN ===== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatParticle {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+}
+
+.plan-trip-page {
+  padding-top: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fc 0%, #f0f4f8 100%);
+}
+
+/* ===== HERO SECTION ===== */
+.plan-trip-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0f0f2a 100%);
+}
+
+.plan-trip-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 157, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.plan-trip-hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.plan-trip-hero-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 157, 0, 0.3);
+  border-radius: 50%;
+  animation: floatParticle 6s ease-in-out infinite;
+}
+
+.plan-trip-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 1.5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.plan-trip-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-trip-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 0%, #FF9D00 50%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plan-trip-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ===== TRAVEL ESSENTIALS SECTION ===== */
+.travel-essentials-section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.essentials-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.essentials-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FF9D00;
+  margin-bottom: 0.75rem;
+}
+
+.essentials-badge::before,
+.essentials-badge::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: #FF9D00;
+  opacity: 0.3;
+}
+
+.essentials-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.essentials-header p {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== MENU GRID ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color, #FF9D00) 0%, var(--card-color-light, #FF6B35) 100%);
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: left;
+  z-index: 1;
+}
+
+.menu-card:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.menu-card-bg {
+  background: var(--card-gradient, linear-gradient(135deg, #f8f9fc 0%, #f0f4f8 100%));
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card-bg::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.menu-card:hover .menu-card-bg::after {
+  opacity: 1;
+}
+
+.menu-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card:hover .menu-icon-wrapper {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon-wrapper svg {
+  width: 48px;
+  height: 48px;
+}
+
+.menu-card-content {
+  padding: 0 1.25rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.menu-card-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.menu-card-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: var(--card-color, #FF9D00);
+  color: white;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 12px rgba(255, 157, 0, 0.2);
+}
+
+.menu-card-button:hover {
+  background: var(--card-color-light, #FF6B35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 157, 0, 0.3);
+  color: white;
+}
+
+.menu-card-button svg {
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-card-button svg {
+  transform: translateX(4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-trip-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .plan-trip-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .plan-trip-hero p {
+    font-size: 1rem;
+  }
+
+  .travel-essentials-section {
+    padding: 3rem 0;
+  }
+
+  .essentials-header h2 {
+    font-size: 2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-card-bg {
+    padding: 2rem 1.5rem;
+  }
+
+  .menu-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu-icon-wrapper svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-trip-hero {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .plan-trip-hero h1 {
+    font-size: 2rem;
+  }
+
+  .plan-trip-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-card-title {
+    font-size: 1.25rem;
+  }
+}

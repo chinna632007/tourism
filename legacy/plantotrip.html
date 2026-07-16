@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - Kerala Tourism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu li {
+            color: #333;
+            cursor: pointer;
+            padding: 8px 0;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li:hover {
+            color: #FF9D00;
+        }
+
+        .nav-menu li.active {
+            color: #FF9D00;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Plan Your Trip Section */
+        .plan-trip-section {
+            background: white;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .menu-card {
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-color: #FF9D00;
+        }
+
+        .menu-icon {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu-content {
+            flex: 1;
+            width: 100%;
+        }
+
+        .menu-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        .menu-link {
+            color: #1a1a1a;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #FF9D00;
+            gap: 12px;
+        }
+
+        .arrow-icon {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card:hover .arrow-icon {
+            transform: translateX(4px);
+        }
+
+        /* Currency Card Special Styling */
+        .currency-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .currency-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .currency-amount {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .currency-name {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .currency-divider {
+            margin: 5px 0;
+        }
+
+        /* App Download Section */
+        .app-download {
+            background: transparent;
+            padding: 20px 0;
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .app-btn {
+            background: white;
+            color: #333;
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: 1px solid #e0e0e0;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .app-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: #FF9D00;
+        }
+
+        .app-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .app-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .app-btn-text small {
+            font-size: 0.65rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .app-btn-text strong {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .menu-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .app-download {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <img src="https://www.keralatourism.org/images/logo/logo.png" alt="Kerala Tourism" class="logo">
+                <ul class="nav-menu">
+                    <li>Where to go</li>
+                    <li>Experiences</li>
+                    <li class="active">Plan your trip</li>
+                </ul>
+                <div class="nav-icons">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Plan Your Trip Section -->
+        <div class="plan-trip-section">
+            <div class="section-header">
+                <h2>Plan Your Trip</h2>
+                <p>Everything you need to know for your Kerala adventure</p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+                <!-- Tourist Information Centers -->
+                <a href="/information-offices/" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="100" height="120" fill="none" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="80" r="20" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 70 110 Q 100 130 130 110" fill="none" stroke="#333" stroke-width="2"/>
+                            <rect x="80" y="130" width="40" height="40" fill="none" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="155" r="15" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 95 150 L 100 160 L 108 148" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Tourist Information Centers</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- How to Reach -->
+                <a href="/how-to-reach-kerala/" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="70" width="120" height="90" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 40 90 L 100 110 L 160 90" fill="none" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="140" r="10" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 60 50 L 60 70" stroke="#333" stroke-width="2"/>
+                            <path d="M 140 50 L 140 70" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="40" r="18" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 93 35 L 100 45 L 110 35" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">How to Reach</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Yathri Nivas - Book Online -->
+                <a href="https://www.keralatourism.org/yatrinivas/" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="45" y="90" width="110" height="80" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 45 90 L 100 45 L 155 90" fill="none" stroke="#333" stroke-width="2"/>
+                            <rect x="65" y="110" width="30" height="30" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <rect x="105" y="110" width="30" height="30" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <circle cx="80" cy="125" r="4" fill="#FF9D00"/>
+                            <circle cx="120" cy="125" r="4" fill="#FF9D00"/>
+                            <path d="M 75 145 L 125 145" stroke="#333" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Yathri Nivas - Book Online</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Maps -->
+                <a href="https://www.keralatourism.org/google-map" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="35" y="25" width="130" height="150" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 35 55 L 165 55" stroke="#333" stroke-width="1"/>
+                            <path d="M 35 85 L 165 85" stroke="#333" stroke-width="1"/>
+                            <path d="M 35 115 L 165 115" stroke="#333" stroke-width="1"/>
+                            <path d="M 35 145 L 165 145" stroke="#333" stroke-width="1"/>
+                            <path d="M 75 25 L 75 175" stroke="#333" stroke-width="1"/>
+                            <path d="M 125 25 L 125 175" stroke="#333" stroke-width="1"/>
+                            <path d="M 95 45 L 110 70 L 85 70 Z" fill="#FF9D00" stroke="#FF9D00" stroke-width="2"/>
+                            <rect x="135" y="105" width="22" height="35" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Maps</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Visa on Arrival -->
+                <a href="https://indianvisaonline.gov.in/evisa/tvoa.html" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="65" cy="75" r="28" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 55 70 L 65 80 L 80 65" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <rect x="115" y="55" width="55" height="40" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 125 100 L 125 135 L 160 135 L 160 100" fill="none" stroke="#333" stroke-width="2"/>
+                            <circle cx="100" cy="155" r="22" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 93 150 L 100 162 L 112 148" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Visa on Arrival</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Emergency Contact -->
+                <a href="/contactus/" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="85" r="32" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 82 80 L 118 80" stroke="#333" stroke-width="2"/>
+                            <circle cx="88" cy="80" r="4" fill="#333"/>
+                            <circle cx="112" cy="80" r="4" fill="#333"/>
+                            <path d="M 88 100 Q 100 115 112 100" fill="none" stroke="#333" stroke-width="2"/>
+                            <rect x="65" y="130" width="70" height="45" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <circle cx="100" cy="152" r="10" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 93 148 L 100 158 L 110 148" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Emergency Contact</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Where to Stay -->
+                <a href="https://www.keralatourism.org/where-to-stay" class="menu-card">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="45" y="95" width="110" height="75" fill="none" stroke="#333" stroke-width="2"/>
+                            <path d="M 45 95 L 100 50 L 155 95" fill="none" stroke="#333" stroke-width="2"/>
+                            <rect x="65" y="115" width="30" height="30" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <rect x="105" y="115" width="30" height="30" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <circle cx="100" cy="155" r="15" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 93 150 L 100 162 L 110 150" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Where to Stay</div>
+                        <span class="menu-link">
+                            Visit 
+                            <svg class="arrow-icon" viewBox="0 0 24.336 24.336">
+                                <path d="M5.879,13.766H15.5a2.2,2.2,0,0,1,.384.043,1.79,1.79,0,0,1,1.207,2.339,1.753,1.753,0,0,1-1.4,1.052,1.433,1.433,0,0,1-.193.01H1.722l-.1,0a1.412,1.412,0,0,1-.191-.022A1.761,1.761,0,0,1,.01,15.681,1.785,1.785,0,0,1,0,15.488V1.711A1.784,1.784,0,0,1,2.382.12a1.761,1.761,0,0,1,1.052,1.4,1.809,1.809,0,0,1,.01.193l-.25,12.042c-.081-.052-1.131,0,2.685.012Z" transform="translate(8 24.336) rotate(-135)" fill="#1a1a1a"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Currency -->
+                <div class="menu-card" style="cursor: default;">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="65" fill="none" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 100 35 L 100 165" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 65 65 L 135 135" stroke="#FF9D00" stroke-width="2"/>
+                            <path d="M 135 65 L 65 135" stroke="#FF9D00" stroke-width="2"/>
+                            <text x="100" y="108" text-anchor="middle" font-size="45" fill="#FF9D00" font-weight="bold" font-family="Arial">₹</text>
+                        </svg>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title">Currency</div>
+                        <div class="currency-display">
+                            <div class="currency-row">
+                                <span class="currency-amount">1</span>
+                                <span class="currency-name">Euro</span>
+                            </div>
+                            <div class="currency-divider">
+                                <svg width="50" height="25" viewBox="0 0 50 25">
+                                    <path d="M 5 12 L 45 12 M 25 5 L 40 12 L 25 19" stroke="#FF9D00" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="currency-row">
+                                <span class="currency-amount">102.23</span>
+                                <span class="currency-name">Rupee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Download Section -->
+            <div class="app-download">
+                <a href="https://apps.apple.com/us/app/kerala-tourism-official/id1460526344" class="app-btn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="black">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.68.81-1.83 1.44-2.94 1.46-.13-1.17.34-2.35 1.04-3.15z"/>
+                    </svg>
+                    <span class="app-btn-text">
+                        <small>Download on the</small>
+                        <strong>IOS</strong>
+                    </span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=org.keralatourism.travelkerala" class="app-btn" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="black">
+                        <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.196 12l2.502-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302-8.634-8.634z"/>
+                    </svg>
+                    <span class="app-btn-text">
+                        <small>Download on</small>
+                        <strong>Android</strong>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effects and interactivity
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (!this.style.cursor || this.style.cursor !== 'default') {
+                    this.style.transform = 'translateY(-8px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

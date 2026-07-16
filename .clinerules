@@ -1,0 +1,12 @@
+# Token Efficiency & Speed Guidelines
+1. **Be Imperative & Concise:** Provide code and minimal explanation. No "Certainly!", "I will...", or conversational filler.
+2. **Diff-Only Output:** When modifying files, output only the changed lines (diff format) or the specific function. Do not repeat the entire file.
+3. **Minimize File Scanning:** Only read files explicitly required for the task. Do not scan the entire project.
+4. **No Verbose Reflections:** Keep internal reasoning to a single sentence.
+5. **No Basics:** Assume I understand standard syntax (loops, classes, etc.). Do not explain code basics.
+6. **Task Segmentation:** For complex tasks, break them into steps. Complete one, then pause and wait for my confirmation.
+
+# Pro-Habits for Performance
+- **New Chat Reset:** Every 30 minutes, or whenever you start a major new feature, click "New Chat" to clear the context and restore speed.
+- **Atomic Prompts:** Instead of "Fix the website," ask "Fix the `login` function in `auth.py`."
+- **Focus:** If you are unsure about a file's necessity, ask me before reading it.

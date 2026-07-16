@@ -1,0 +1,130 @@
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import './Spirituality.css';
+
+const categories = [
+  {
+    id: 'temples',
+    title: 'Temples',
+    icon: '🛕',
+    color: '#FF6B35',
+    bgColor: '#FFF5EB',
+    description: 'Explore the ancient temples of East Godavari, where centuries-old architecture meets spiritual serenity.',
+    link: '/spirituality/temples'
+  },
+  {
+    id: 'churches',
+    title: 'Churches',
+    icon: '⛪',
+    color: '#4A90D9',
+    bgColor: '#EBF5FF',
+    description: 'Discover the beautiful churches of East Godavari, where stunning architecture and peaceful sanctuaries offer solace to the soul.',
+    link: '/spirituality/churches'
+  },
+  {
+    id: 'masjids',
+    title: 'Masjids',
+    icon: '🕌',
+    color: '#2E8B57',
+    bgColor: '#F0FFF4',
+    description: 'Experience the peaceful ambiance of East Godavari\'s mosques, where Islamic architecture and spiritual devotion create an atmosphere of serenity.',
+    link: '/spirituality/masjids'
+  }
+];
+
+const Spirituality = () => {
+  useEffect(() => {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    fadeElements.forEach((el) => observer.observe(el));
+    const fallbackTimer = setTimeout(() => {
+      fadeElements.forEach((el) => el.classList.add('visible'));
+    }, 500);
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="spirituality-page">
+      <Helmet>
+        <title>Spirituality in East Godavari - Temples, Churches & Mosques | East Godavari Tourism</title>
+        <meta name="description" content="Explore the spiritual heritage of East Godavari - ancient temples, serene churches, and peaceful mosques that reflect the region's diverse religious harmony." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="spirituality-hero">
+        <div className="spirituality-hero-bg"></div>
+        <div className="spirituality-hero-overlay"></div>
+        <div className="container">
+          <div className="spirituality-hero-content">
+            <div className="spirituality-hero-badge fade-in">
+              <span>🙏</span> Spiritual Journey
+            </div>
+            <h1 className="fade-in">
+              Discover the Divine
+              <span className="hero-highlight"> Soul of East Godavari</span>
+            </h1>
+            <div className="spirituality-quote fade-in">
+              <div className="quote-mark quote-mark-top">"</div>
+              <p className="quote-text">
+                In the land where rivers flow and temples stand tall, 
+                where the call to prayer echoes through minarets and church bells ring in harmony — 
+                East Godavari is not just a destination, it is a pilgrimage of the soul.
+              </p>
+              <div className="quote-mark quote-mark-bottom">"</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Cards Section */}
+      <section className="spirituality-categories-section">
+        <div className="container">
+          <h2 className="section-heading fade-in">Choose Your Path</h2>
+          <p className="section-subheading fade-in">Click on a category to explore its sacred places</p>
+          <div className="spirituality-categories-grid">
+            {categories.map((cat) => (
+              <Link
+                key={cat.id}
+                to={cat.link}
+                className="spirituality-category-card fade-in"
+                style={{ 
+                  '--cat-color': cat.color,
+                  '--cat-bg': cat.bgColor
+                }}
+              >
+                <div className="spirituality-category-card-image" style={{ background: cat.bgColor }}>
+                  <span className="spirituality-category-icon">{cat.icon}</span>
+                </div>
+                <div className="spirituality-category-card-content">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.description}</p>
+                  <span className="spirituality-category-card-btn" style={{ color: cat.color }}>
+                    Explore {cat.title} <span className="arrow">→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+};
+
+export default Spirituality;

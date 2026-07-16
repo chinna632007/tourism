@@ -1,0 +1,791 @@
+/* ===== EXPERIENCES PAGE - ULTRA MODERN DESIGN ===== */
+
+/* ===== 1. TEXT GRADIENT UTILITY ===== */
+.text-gradient {
+  background: linear-gradient(135deg, #f5a623 0%, var(--kt-colors-orangePeel-900) 50%, #ff6b35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== 2. STUNNING VIDEO HERO ===== */
+.experiences-page .hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experiences-page .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.experiences-page .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 0;
+}
+
+/* Animated floating particles */
+.experiences-page .hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.experiences-page .hero-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.12);
+  animation: floatParticle linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Hero Content */
+.experiences-page .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 1020px;
+  padding: 2rem;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.experiences-page .hero-content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtitle Badge */
+.experiences-page .hero-subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experiences-page .hero-subtitle-badge svg {
+  stroke: #f5a623;
+}
+
+.experiences-page .hero-content h1 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 39px;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.experiences-page .hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Action Buttons */
+.experiences-page .hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experiences-page .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+  font-family: var(--kt-fonts-body);
+}
+
+.experiences-page .hero-btn-primary {
+  background: linear-gradient(135deg, var(--kt-colors-orangePeel-900), #f5a623);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(245, 166, 35, 0.3);
+}
+
+.experiences-page .hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(245, 166, 35, 0.4);
+}
+
+.experiences-page .hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experiences-page .hero-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Scroll Indicator */
+.experiences-page .hero-scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeInUp 2s ease 2s backwards;
+}
+
+.experiences-page .hero-scroll-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  position: relative;
+}
+
+.experiences-page .hero-scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: #f5a623;
+  border-radius: 4px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+  0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(12px); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(24px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ===== 3. CATEGORIES SECTION ===== */
+.experiences-page .categories-section {
+  padding: 5rem 0 3rem;
+  background: linear-gradient(180deg, #e8f4f4 0%, #f0f8f0 100%);
+  text-align: center;
+}
+
+.experiences-page .categories-section .section-header {
+  margin-bottom: 2.5rem;
+}
+
+.experiences-page .categories-section .section-header h2 {
+  font-size: 2.5rem;
+}
+
+.experiences-page .nav-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experiences-page .nav-tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.experiences-page .nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border: 2px solid rgba(26, 107, 122, 0.15);
+  border-radius: 16px;
+  cursor: pointer;
+  color: #1a6b7a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: var(--kt-fonts-body);
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.06);
+}
+
+.experiences-page .nav-tab:hover {
+  background: #ffffff;
+  color: #1a6b7a;
+  border-color: #1a6b7a;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(26, 107, 122, 0.15);
+}
+
+.experiences-page .nav-tab.active {
+  background: linear-gradient(135deg, #0f4c5c 0%, #1a6b7a 50%, #2d8a9e 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(26, 107, 122, 0.3);
+  transform: translateY(-4px);
+}
+
+.experiences-page .nav-icon {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.experiences-page .nav-tab-text {
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===== 4. CATEGORY SECTIONS ===== */
+.experiences-page .category-section {
+  display: none;
+  animation: fadeIn 0.5s ease;
+  padding: 6rem 0 5rem;
+  min-height: 100vh;
+  background: #f8f9fc;
+}
+
+.experiences-page .category-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.experiences-page .section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.experiences-page .section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--kt-colors-orangePeel-900);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.experiences-page .section-label::before,
+.experiences-page .section-label::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--kt-colors-orangePeel-900);
+  opacity: 0.3;
+}
+
+.experiences-page .section-header h2 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 2.75rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.experiences-page .section-header p {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== 5. MODERN SUBCATEGORY CARDS ===== */
+.experiences-page .subcategories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.experiences-page .subcategory-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  position: relative;
+  min-height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.experiences-page .subcategory-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.experiences-page .subcategory-card .card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.experiences-page .subcategory-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.experiences-page .subcategory-card:hover img {
+  transform: scale(1.1);
+}
+
+.experiences-page .subcategory-card .card-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.experiences-page .subcategory-card:hover .card-image-overlay {
+  opacity: 1;
+}
+
+/* Card Badge */
+.experiences-page .subcategory-card .card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--kt-colors-orangePeel-900);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experiences-page .subcategory-card:hover .card-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Content */
+.experiences-page .subcategory-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+}
+
+.experiences-page .card-content-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 166, 35, 0.08);
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  color: var(--kt-colors-orangePeel-900);
+}
+
+.experiences-page .card-content-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.experiences-page .subcategory-card h4 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: #1a1a2e;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.experiences-page .subcategory-card:hover h4 {
+  background: linear-gradient(135deg, var(--kt-colors-orangePeel-900), #f5a623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experiences-page .subcategory-card p {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.experiences-page .subcategory-card .card-location {
+  font-size: 0.78rem;
+  color: var(--kt-colors-orangePeel-900);
+  font-weight: 600;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  letter-spacing: 0.3px;
+}
+
+.experiences-page .subcategory-card .card-location::before {
+  content: "📍";
+  font-size: 0.85rem;
+}
+
+/* Explore Button */
+.experiences-page .card-explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background: #f8f9fc;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.experiences-page .card-explore-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.experiences-page .subcategory-card:hover .card-explore-btn {
+  background: linear-gradient(135deg, var(--kt-colors-orangePeel-900), #f5a623);
+  color: #ffffff;
+}
+
+.experiences-page .subcategory-card:hover .card-explore-btn svg {
+  transform: translateX(4px);
+}
+
+/* ===== 6. FEATURED EXPERIENCES SECTION ===== */
+
+
+/* ===== 7. FEATURED CTA SECTION ===== */
+.experiences-page .featured-cta {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 40%, #0f0f2a 100%);
+  color: #ffffff;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.experiences-page .cta-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 25% 50%, rgba(245, 166, 35, 0.04) 0%, transparent 50%),
+                    radial-gradient(circle at 75% 50%, rgba(245, 166, 35, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.experiences-page .featured-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245, 166, 35, 0.3), transparent);
+}
+
+.experiences-page .featured-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.experiences-page .cta-subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f5a623;
+  margin-bottom: 1.25rem;
+}
+
+.experiences-page .featured-content h2 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.experiences-page .featured-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Stats */
+.experiences-page .cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.experiences-page .cta-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.experiences-page .cta-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5a623 0%, var(--kt-colors-orangePeel-900) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experiences-page .cta-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.experiences-page .cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== 8. ANIMATIONS ===== */
+.experiences-page .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.experiences-page .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 9. RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .experiences-page .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experiences-page .hero {
+    min-height: 600px;
+  }
+
+  .experiences-page .hero-content h1 {
+    font-size: 2.75rem;
+  }
+
+  .experiences-page .hero-content p {
+    font-size: 1rem;
+  }
+
+  .experiences-page .hero-actions {
+    flex-direction: column;
+  }
+
+  .experiences-page .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .experiences-page .categories-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .experiences-page .categories-section .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .experiences-page .nav-tab {
+    min-width: 130px;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .experiences-page .nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .experiences-page .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .experiences-page .subcategories {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .experiences-page .featured-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .experiences-page .cta-stats {
+    gap: 2rem;
+  }
+
+  .experiences-page .experience-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiences-page .hero {
+    min-height: 500px;
+  }
+
+  .experiences-page .hero-content {
+    padding: 1rem;
+  }
+
+  .experiences-page .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .experiences-page .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .experiences-page .hero-scroll-indicator {
+    display: none;
+  }
+
+  .experiences-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .experiences-page .subcategories {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .experiences-page .experience-card {
+    height: 360px;
+    border-radius: 16px;
+  }
+
+  .experiences-page .featured-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .experiences-page .cta-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .experiences-page .cta-actions {
+    flex-direction: column;
+  }
+}

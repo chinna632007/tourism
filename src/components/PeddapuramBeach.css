@@ -1,0 +1,723 @@
+.destination-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(135deg, #1e5f74 0%, #2d8bba 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.east-godavaritourism.org/ktadmin/img/pages/vertical/kovalam-1706953883_0dcc389088605e1d6f34.webp') center/cover;
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.destination-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Georgia', serif;
+}
+
+.destination-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+
+.destination-location {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #1e5f74;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: #2d8bba;
+  transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Content Sections */
+.content-section {
+  background: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  margin-bottom: 30px;
+  border-bottom: 3px solid #1e5f74;
+  padding-bottom: 15px;
+}
+
+.section-header h2 {
+  color: #1e5f74;
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Overview Section */
+.overview-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.overview-text .lead-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.overview-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4F5051;
+  margin-bottom: 15px;
+}
+
+/* Quick Info Card */
+.quick-info-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #1e5f74;
+  height: fit-content;
+}
+
+.quick-info-card h3 {
+  color: #1e5f74;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.info-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #1e5f74;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Info Content */
+.info-content {
+  margin-bottom: 30px;
+}
+
+.info-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4F5051;
+  margin-bottom: 15px;
+}
+
+/* Activities Section */
+.activities-section {
+  margin-top: 40px;
+}
+
+.activities-section h3 {
+  color: #1e5f74;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.activity-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e5f74;
+  box-shadow: 0 6px 15px rgba(30, 95, 116, 0.2);
+}
+
+.activity-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.activity-card h4 {
+  color: #1e5f74;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.activity-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Highlight Section */
+.highlight-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e0f2f7 100%);
+  border-left: 5px solid #1e5f74;
+}
+
+/* How to Reach Section */
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.reach-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+
+.reach-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e5f74;
+  box-shadow: 0 6px 15px rgba(30, 95, 116, 0.2);
+}
+
+.reach-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.reach-card h3 {
+  color: #1e5f74;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.reach-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.distance {
+  display: inline-block;
+  background: #1e5f74;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Gallery Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Nearby Attractions */
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.attraction-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e5f74;
+  box-shadow: 0 6px 15px rgba(30, 95, 116, 0.2);
+}
+
+.attraction-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .attraction-image img {
+  transform: scale(1.1);
+}
+
+.attraction-info {
+  padding: 20px;
+}
+
+.attraction-info h4 {
+  color: #1e5f74;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.distance-badge {
+  display: inline-block;
+  background: #1e5f74;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.attraction-info p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Accommodation Section */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #1e5f74;
+  background: white;
+  color: #1e5f74;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: #1e5f74;
+  color: white;
+}
+
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.accommodation-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.accommodation-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e5f74;
+  box-shadow: 0 6px 15px rgba(30, 95, 116, 0.2);
+}
+
+.accommodation-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.accommodation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.accommodation-card:hover .accommodation-image img {
+  transform: scale(1.1);
+}
+
+.accommodation-info {
+  padding: 20px;
+}
+
+.accommodation-info h4 {
+  color: #1e5f74;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-family: 'Georgia', serif;
+}
+
+.accommodation-type {
+  display: inline-block;
+  background: #1e5f74;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Tips Section */
+.tips-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e0f2f7 100%);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #1e5f74;
+  transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #1e5f74;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.tip-item p {
+  color: #4F5051;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #1e5f74;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(30, 95, 116, 0.2);
+}
+
+.contact-card h3 {
+  color: #1e5f74;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.contact-card p {
+  color: #4F5051;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+.plan-visit-btn {
+  background: linear-gradient(135deg, #1e5f74 0%, #2d8bba 100%);
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 95, 116, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-visit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(30, 95, 116, 0.4);
+  background: linear-gradient(135deg, #2d8bba 0%, #1e5f74 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .destination-title {
+    font-size: 2.5rem;
+  }
+
+  .destination-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .overview-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .content-section {
+    padding: 25px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .reach-grid,
+  .attractions-grid,
+  .accommodation-grid,
+  .tips-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .destination-title {
+    font-size: 2rem;
+  }
+
+  .destination-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    height: 350px;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  .content-section {
+    padding: 20px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 11px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .plan-visit-btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,657 @@
+.events-page {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Hero Banner */
+.events-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url('https://www.east-godavaritourism.org/ktadmin/img/pages/large-desktop/festivals-1715580634_9cd043bfe89b7bf09160.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+}
+
+.events-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding-top: 120px;
+}
+
+.events-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.events-breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.events-breadcrumb a:hover {
+  color: #FF9D00;
+}
+
+.breadcrumb-separator {
+  color: #000;
+}
+
+.breadcrumb-current {
+  color: #fff;
+}
+
+.events-hero-title {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 2.33rem;
+  font-weight: 500;
+  line-height: 1.33;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .events-hero-title {
+    font-size: 3.33rem;
+  }
+}
+
+/* Category Navigation */
+.events-categories-wrapper {
+  position: relative;
+  padding: 16px 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.events-categories-container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.events-categories-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.events-category-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.events-category-item a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.events-category-item a:hover {
+  color: #FF9D00;
+}
+
+.events-category-item a.active {
+  color: #FF9D00;
+}
+
+.category-separator {
+  color: #000;
+  font-size: 16px;
+}
+
+/* Intro Section */
+.events-intro {
+  padding: 32px 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.events-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  transform: translateY(-150px);
+  opacity: 0;
+  animation: fadeInUp 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.events-intro-text {
+  font-family: var(--east-godavari-tourism-fonts-body);
+  font-size: 18px;
+  line-height: 1.625;
+  color: #4A5568;
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  .events-intro-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .events-intro-text {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-intro-text {
+    font-size: 24px;
+  }
+}
+
+/* Festival Category Sections */
+.events-category-section {
+  padding: 44px 0;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .events-category-section {
+    padding-bottom: 62px;
+  }
+}
+
+.events-category-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.events-category-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .events-category-content {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.events-category-content.reverse {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+  .events-category-content.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.events-category-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: transform 0.8s linear;
+}
+
+.events-category-image:hover {
+  transform: scale(1.05);
+}
+
+.events-category-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .events-category-content:not(.reverse) .events-category-image {
+    width: calc(50% + 100px);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .events-category-content.reverse .events-category-image {
+    width: calc(50% + 100px);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+}
+
+.events-category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  background: #F9FAFC;
+}
+
+@media (min-width: 768px) {
+  .events-category-info {
+    width: 500px;
+    padding: 40px 60px;
+    background: #fff;
+  }
+}
+
+.events-category-title {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 1.78rem;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #000;
+  margin: 0 0 16px 0;
+  padding-top: 16px;
+}
+
+@media (min-width: 480px) {
+  .events-category-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .events-category-title {
+    font-size: 2.22rem;
+    line-height: 1.2;
+    padding-top: 0;
+  }
+}
+
+.events-category-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4A5568;
+  margin: 0 0 24px 0;
+}
+
+@media (min-width: 992px) {
+  .events-category-description {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .events-category-description {
+    font-size: 18px;
+  }
+}
+
+.events-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  width: fit-content;
+}
+
+.events-more-btn:hover {
+  color: #FF9D00;
+  border-color: #FF9D00;
+  text-decoration: none;
+}
+
+.events-more-btn:hover svg path {
+  fill: #FF9D00;
+}
+
+/* Festival Highlights Section */
+.events-highlights-section {
+  position: relative;
+  padding: 32px 0 80px 0;
+}
+
+@media (min-width: 992px) {
+  .events-highlights-section {
+    padding-bottom: 62px;
+  }
+}
+
+.events-highlights-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.events-highlights-header {
+  text-align: center;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+
+.events-highlights-title {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 2.33rem;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #000;
+  margin: 0 0 16px 0;
+}
+
+@media (min-width: 480px) {
+  .events-highlights-title {
+    font-size: 2.89rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .events-highlights-title {
+    font-size: 3.33rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-highlights-title {
+    margin-bottom: 20px;
+  }
+}
+
+.events-highlights-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #4A5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .events-highlights-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .events-highlights-subtitle {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-highlights-subtitle {
+    font-size: 24px;
+  }
+}
+
+.events-highlights-grid {
+  display: flex;
+  margin-left: -1%;
+  height: auto;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .events-highlights-grid {
+    height: 556px;
+    gap: 0;
+  }
+}
+
+.events-highlight-card {
+  flex: 0 0 98%;
+  margin: 0 1%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .events-highlight-card {
+    flex: 0 0 48%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-highlight-card {
+    flex: 0 0 31.33%;
+    margin: 0 1%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .events-highlight-card {
+    flex: 0 0 23%;
+  }
+}
+
+.events-highlight-card:hover {
+  color: #FF9D00;
+  text-decoration: none;
+}
+
+.events-highlight-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+  transition: 0.4s linear;
+}
+
+.events-highlight-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.events-highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.events-highlight-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 5;
+}
+
+.events-highlight-title {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #fff;
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  .events-highlight-title {
+    font-size: 1.22rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .events-highlight-title {
+    font-size: 1.44rem;
+  }
+}
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+  padding: 32px 16px;
+  background: #fff;
+}
+
+.upcoming-events-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.upcoming-events-section .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upcoming-events-section .section-header h2 {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 2.33rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 16px 0;
+}
+
+@media (min-width: 480px) {
+  .upcoming-events-section .section-header h2 {
+    font-size: 2.89rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .upcoming-events-section .section-header h2 {
+    font-size: 3.33rem;
+  }
+}
+
+.upcoming-events-section .section-header p {
+  font-size: 16px;
+  color: #4A5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.event-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s linear;
+}
+
+.event-card:hover img {
+  transform: scale(1.1);
+}
+
+.event-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: #fff;
+}
+
+.event-date-badge {
+  display: inline-block;
+  background: #FF9D00;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.event-card-overlay h4 {
+  font-family: var(--east-godavari-tourism-fonts-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.event-card-overlay p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: #E2E8F0;
+}
+
+.events-explore-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.4s ease-in-out;
+}
+
+.explore-btn:hover {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.explore-btn svg {
+  transition: transform 0.3s;
+}
+
+.explore-btn:hover svg {
+  transform: translateX(4px);
+}

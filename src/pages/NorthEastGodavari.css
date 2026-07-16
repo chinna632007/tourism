@@ -1,0 +1,539 @@
+/* ===== MALABAR PAGE STYLES ===== */
+
+.malabar-page {
+  min-height: 100vh;
+  background: var(--kt-colors-antiFlashWhite);
+}
+
+/* Hero Section */
+.malabar-hero {
+  background: linear-gradient(135deg, var(--kt-colors-russian-900) 0%, #434343 100%);
+  padding: 6rem 0;
+  color: var(--kt-colors-white);
+  position: relative;
+}
+
+.malabar-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.east-godavaritourism.org/ktadmin/img/pages/large-desktop/bekal-fort-1723618974_50a0a3fc7d65eb9da109.webp') center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.malabar-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.malabar-hero .hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.malabar-hero h1 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.malabar-hero h1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.malabar-hero p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.malabar-hero p.visible {
+  opacity: 0.9;
+  transform: translateY(0);
+}
+
+/* Description Section */
+.malabar-description {
+  padding: 4rem 0;
+  background: var(--kt-colors-white);
+}
+
+.malabar-description .container {
+  max-width: 800px;
+}
+
+.malabar-description p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--kt-colors-russian-100);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.malabar-description p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+  font-family: var(--kt-fonts-heading);
+  font-size: 2.5rem;
+  color: var(--kt-colors-black);
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation Grid */
+.malabar-navigation {
+  padding: 4rem 0;
+  background: var(--kt-colors-antiFlashWhite);
+}
+
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .navigation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.navigation-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 200px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.navigation-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigation-card-link {
+  display: block;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.navigation-card:hover img {
+  transform: scale(1.1);
+}
+
+.navigation-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+  color: white;
+}
+
+.navigation-card h5 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.explore-text {
+  font-size: 0.875rem;
+  color: var(--kt-colors-orangePeel-900);
+  font-weight: 600;
+}
+
+/* Destinations Grid */
+.destinations-section {
+  padding: 4rem 0;
+  background: var(--kt-colors-white);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62em) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.destination-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--kt-colors-antiFlashWhite);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.destination-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.destination-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.destination-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.05);
+}
+
+.destination-card-content {
+  padding: 1.5rem;
+}
+
+.destination-card h4 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--kt-colors-black);
+}
+
+.destination-card .location {
+  font-size: 0.9rem;
+  color: var(--kt-colors-orangePeel-900);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.destination-card p {
+  font-size: 0.95rem;
+  color: var(--kt-colors-russian-100);
+  line-height: 1.6;
+}
+
+/* List Items Grid */
+.list-section {
+  padding: 4rem 0;
+  background: var(--kt-colors-white);
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62em) {
+  .list-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.list-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--kt-colors-antiFlashWhite);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.list-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.list-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.list-card:hover img {
+  transform: scale(1.05);
+}
+
+.list-card-content {
+  padding: 1.5rem;
+}
+
+.list-card h4 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--kt-colors-black);
+}
+
+.list-card p {
+  font-size: 0.95rem;
+  color: var(--kt-colors-russian-100);
+  line-height: 1.6;
+}
+
+/* Culture Grid */
+.culture-section {
+  padding: 4rem 0;
+  background: var(--kt-colors-antiFlashWhite);
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62em) {
+  .culture-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.culture-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--kt-colors-white);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.culture-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.culture-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.culture-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.culture-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.culture-card:hover img {
+  transform: scale(1.05);
+}
+
+.culture-card-content {
+  padding: 1.25rem;
+}
+
+.culture-card h4 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--kt-colors-black);
+}
+
+.culture-card p {
+  font-size: 0.9rem;
+  color: var(--kt-colors-russian-100);
+  line-height: 1.6;
+}
+
+/* Portfolio Slider */
+.malabar-portfolio {
+  padding: 4rem 0;
+  background: var(--kt-colors-russian-900);
+  color: white;
+}
+
+.malabar-portfolio .section-title {
+  color: white;
+}
+
+.portfolio-slider {
+  margin-top: 2rem;
+}
+
+.portfolio-slide {
+  padding: 1rem;
+}
+
+.portfolio-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-link img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.portfolio-link h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.portfolio-link p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .malabar-hero {
+    padding: 4rem 0;
+  }
+
+  .malabar-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .malabar-hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .navigation-card {
+    height: 180px;
+  }
+
+  .navigation-card h5 {
+    font-size: 1rem;
+  }
+
+  .malabar-description {
+    padding: 3rem 0;
+  }
+
+  .malabar-navigation,
+  .destinations-section,
+  .culture-section,
+  .list-section,
+  .malabar-portfolio {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .malabar-hero h1 {
+    font-size: 2rem;
+  }
+
+  .navigation-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}

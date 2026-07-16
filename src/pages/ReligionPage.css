@@ -1,0 +1,366 @@
+/* ===== RELIGION PAGE STYLES ===== */
+
+.religion-page {
+  min-height: 100vh;
+  background: var(--kt-colors-antiFlashWhite);
+}
+
+/* Hero Section */
+.religion-hero {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  padding: 6rem 0;
+  color: var(--kt-colors-white);
+  position: relative;
+}
+
+.religion-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.east-godavaritourism.org/ktadmin/img/pages/share/east-godavaris-spiritual-journey-1747234812_083514bf5483a4c8735d.webp') center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.religion-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.religion-hero .hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.religion-hero h1 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.religion-hero h1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.religion-hero p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.religion-hero p.visible {
+  opacity: 0.9;
+  transform: translateY(0);
+}
+
+/* Description Section */
+.religion-description {
+  padding: 4rem 0;
+  background: var(--kt-colors-white);
+}
+
+.religion-description .container {
+  max-width: 800px;
+}
+
+.religion-description p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--kt-colors-russian-100);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.religion-description p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+  font-family: var(--kt-fonts-heading);
+  font-size: 2.5rem;
+  color: var(--kt-colors-black);
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation Grid */
+.religion-navigation {
+  padding: 4rem 0;
+  background: var(--kt-colors-antiFlashWhite);
+}
+
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .navigation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.navigation-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 200px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.navigation-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigation-card-link {
+  display: block;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.navigation-card:hover img {
+  transform: scale(1.1);
+}
+
+.navigation-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+  color: white;
+}
+
+.navigation-card h5 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.explore-text {
+  font-size: 0.875rem;
+  color: var(--kt-colors-orangePeel-900);
+  font-weight: 600;
+}
+
+/* Spiritual Journey Grid */
+.spiritual-journey-section {
+  padding: 4rem 0;
+  background: var(--kt-colors-white);
+}
+
+.spiritual-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 48em) {
+  .spiritual-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62em) {
+  .spiritual-journey-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.religion-card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--kt-colors-antiFlashWhite);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.religion-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.religion-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.religion-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.religion-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.religion-card:hover img {
+  transform: scale(1.05);
+}
+
+.religion-card-content {
+  padding: 1.5rem;
+}
+
+.religion-card h4 {
+  font-family: var(--kt-fonts-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--kt-colors-black);
+}
+
+.religion-card p {
+  font-size: 0.95rem;
+  color: var(--kt-colors-russian-100);
+  line-height: 1.6;
+}
+
+/* Portfolio Slider */
+.religion-portfolio {
+  padding: 4rem 0;
+  background: #f5f5f5;
+  color: var(--kt-colors-black);
+}
+
+.religion-portfolio .section-title {
+  color: var(--kt-colors-black);
+}
+
+.portfolio-slider {
+  margin-top: 2rem;
+}
+
+.portfolio-slide {
+  padding: 1rem;
+}
+
+.portfolio-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-link img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.portfolio-link h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--kt-colors-black);
+}
+
+.portfolio-link p {
+  font-size: 0.85rem;
+  color: var(--kt-colors-russian-100);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .religion-hero {
+    padding: 4rem 0;
+  }
+
+  .religion-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .religion-hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .navigation-card {
+    height: 180px;
+  }
+
+  .navigation-card h5 {
+    font-size: 1rem;
+  }
+
+  .religion-description {
+    padding: 3rem 0;
+  }
+
+  .religion-navigation,
+  .spiritual-journey-section,
+  .religion-portfolio {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .religion-hero h1 {
+    font-size: 2rem;
+  }
+
+  .navigation-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

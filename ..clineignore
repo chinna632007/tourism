@@ -1,0 +1,24 @@
+# Dependency Folders (Always ignore)
+node_modules/
+**/node_modules/
+.venv/
+vendor/
+
+# Build & Output (The "bloat" folders)
+dist/
+build/
+out/
+.next/
+coverage/
+
+# Large/Generated Files
+*.csv
+*.xlsx
+*.sqlite
+*.log
+*.map
+*.min.js
+
+# Environment Secrets
+.env
+.env.*

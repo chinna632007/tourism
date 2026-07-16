@@ -1,0 +1,375 @@
+.event-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.east-godavaritourism.org/ktadmin/img/pages/vertical/karkidaka-vavu-bali-1747118060_placeholder.webp') center/cover;
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.event-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.event-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.event-temple {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.event-location {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Event Details */
+.event-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+}
+
+.event-info h2 {
+  color: #4a148c;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #7b1fa2;
+  padding-bottom: 10px;
+}
+
+.event-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Event Meta */
+.event-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meta-label {
+  font-weight: bold;
+  color: #4a148c;
+  font-size: 0.95rem;
+}
+
+.meta-value {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Highlights */
+.highlights {
+  margin-bottom: 25px;
+}
+
+.highlights h3 {
+  color: #4a148c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  color: #333;
+  line-height: 1.6;
+}
+
+.highlights li:before {
+  content: "🕯️";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Rituals List */
+.rituals-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rituals-list li {
+  padding: 12px 0 12px 35px;
+  position: relative;
+  color: #333;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.rituals-list li:before {
+  content: "🙏";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.rituals-list li:last-child {
+  border-bottom: none;
+}
+
+/* Places List */
+.places-list {
+  list-style: none;
+  padding: 0;
+}
+
+.places-list li {
+  padding: 12px 0 12px 35px;
+  position: relative;
+  color: #333;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.places-list li:before {
+  content: "📍";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.places-list li:last-child {
+  border-bottom: none;
+}
+
+/* Register Button */
+.register-btn {
+  background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 31, 162, 0.4);
+  background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+}
+
+/* Additional Info */
+.additional-info {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h2 {
+  color: #4a148c;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #7b1fa2;
+  padding-bottom: 10px;
+}
+
+.additional-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Related Events */
+.related-events {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.related-events h2 {
+  color: #4a148c;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #7b1fa2;
+  padding-bottom: 10px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #7b1fa2;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.event-card h4 {
+  color: #4a148c;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  color: #666;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.event-date {
+  display: inline-block;
+  background: #7b1fa2;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 2rem;
+  }
+
+  .event-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .event-details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .event-image-container {
+    height: 250px;
+  }
+
+  .event-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 1.5rem;
+  }
+
+  .event-subtitle {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  .event-details,
+  .additional-info,
+  .related-events {
+    padding: 20px 15px;
+  }
+}
