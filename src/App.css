@@ -60,42 +60,76 @@
        padding: 0 1rem;
      }
 
-     /* ===== HEADER ===== */
-     .header {
-       position: absolute;
-       top: 0 ;
-       left: 0;
-       right: 0;
-       z-index: 100;
-       color: #333;
-       padding: 0.75rem 0;
-       background: white;
-       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-     }
+      /* ===== HEADER ===== */
+      .header {
+        position: absolute;
+        top: 0 ;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        color: #333;
+        padding: 0.75rem 0;
+        background: transparent;
+        box-shadow: none;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
 
-     .header .main-nav li {
-       color: #333;
-     }
+      .header:hover {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
 
-     .header .main-nav li a {
-       color: #333;
-     }
+      @media (min-width: 769px) {
+        .header .main-nav {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
 
-     /* Header positioning for destination detail pages */
-     .page-container .header {
-       position: relative;
-       padding-top: 1rem;
+        .header:hover .main-nav {
+          opacity: 1;
+          visibility: visible;
+        }
 
-     }
+        .header .main-nav li {
+          color: transparent;
+        }
 
-     .header .container {
-       display: flex;
-       align-items: center;
-       
-       height: 70px;
-       justify-content: center;
-       position: relative;
-     }
+        .header:hover .main-nav li {
+          color: #333;
+        }
+
+        .header .main-nav li a {
+          color: transparent !important;
+        }
+
+        .header:hover .main-nav li a {
+          color: #333 !important;
+        }
+
+        .header .header-logo {
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .header:hover .header-logo {
+          opacity: 1;
+        }
+      }
+
+      /* Header positioning for destination detail pages */
+      .page-container .header {
+        position: relative;
+        padding-top: 1rem;
+      }
+
+      .header .container {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        justify-content: center;
+        position: relative;
+      }
 
      .header-logo {
        position: absolute;
