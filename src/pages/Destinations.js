@@ -134,68 +134,41 @@ const Destinations = () => {
 
   return (
     <div className="page-container">
-      {/* Video Hero Section */}
-      <section style={{
-        position: 'relative',
-        height: '100vh',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        {/* Video Background */}
-        <video
-          ref={videoRef}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0
-          }}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/header.jpg"
-          onLoadedData={handleVideoLoad}
-        >
-          <source src="/godavari.mp4" type="video/mp4" />
-          <source src="/experience.mp4" type="video/mp4" />
-        </video>
-
-        {/* Hero Content */}
-        <div style={{
-          position: 'relative',
-          zIndex: 2,
-          textAlign: 'center',
-          color: 'white',
-          padding: '2rem',
-          maxWidth: '800px',
-          opacity: videoLoaded ? 1 : 0,
-          transition: 'opacity 1s ease'
-        }}>
-          <h1 style={{
-            fontFamily: 'Georgia, serif',
-            fontSize: '3.5rem',
-            fontWeight: '400',
-            marginBottom: '1rem'
-          }}>
-            Explore Destinations
-          </h1>
-          <p style={{
-            fontSize: '1.2rem',
-            lineHeight: '1.6'
-          }}>
-            Discover the diverse beauty of East Godavari
-          </p>
+      {/* Hero Video Section (Home Page Style) */}
+      <section className="hero-section">
+        <div className="hero-video-wrapper">
+          <video
+            ref={videoRef}
+            height="100%" width="100%"
+            poster="/header.jpg"
+            preload="metadata"
+            playsInline
+            muted
+            autoPlay
+            loop
+            onLoadedData={handleVideoLoad}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          >
+            <source src="/godavari.mp4" type="video/mp4" />
+            <source src="/experience.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="hero-content" style={{ opacity: videoLoaded ? 1 : 0, transition: 'opacity 1s ease' }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div className="hero-content-inner">
+              <div className="hero-content-body">
+                <hr aria-orientation="vertical" className="hero-divider" />
+                <h6 className="hero-category">East Godavari Tourism</h6>
+                <h1 style={{ fontFamily: "var(--kt-fonts-heading)", fontSize: '2.5rem', color: 'white', marginBottom: '0.5rem', marginLeft: '1.5rem' }}>Explore Destinations</h1>
+                <p className="hero-description">Discover the diverse beauty of East Godavari</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="container" style={{ paddingTop: '120px' }}>
+      <div className="container" style={{ paddingTop: '3rem' }}>
         {/* Category Filter Tabs */}
         <div style={{
           display: 'flex',

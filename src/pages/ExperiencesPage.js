@@ -103,52 +103,36 @@ const ExperiencesPage = () => {
 
   return (
     <div className="experiences-page">
-      {/* ===== STUNNING VIDEO HERO SECTION ===== */}
-      <section className="hero">
-        {/* Video Background */}
-        <video 
-          ref={videoRef}
-          className="hero-video" 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          poster="/header.jpg"
-        >
-          <source src="/experience.mp4" type="video/mp4" />
-          <source src="/godavari.mp4" type="video/mp4" />
-          <source src="/pushkaralu.mp4" type="video/mp4" />
-        </video>
-
-        {/* Gradient Overlay */}
-        <div className="hero-overlay"></div>
-
-        {/* Animated decorative elements */}
-        <div className="hero-particles">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="hero-particle" style={{
-              width: `${20 + Math.random() * 40}px`,
-              height: `${20 + Math.random() * 40}px`,
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${4 + Math.random() * 4}s`
-            }} />
-          ))}
+      {/* ===== HERO VIDEO SECTION (Home Page Style) ===== */}
+      <section className="hero-section">
+        <div className="hero-video-wrapper">
+          <video
+            ref={videoRef}
+            height="100%" width="100%"
+            poster="/header.jpg"
+            preload="metadata"
+            playsInline
+            muted
+            autoPlay
+            loop
+            onLoadedData={() => setVideoLoaded(true)}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          >
+            <source src="/experience.mp4" type="video/mp4" />
+            <source src="/godavari.mp4" type="video/mp4" />
+          </video>
         </div>
-
-        {/* Hero Content */}
-        <div className={`hero-content ${videoLoaded ? 'hero-content-visible' : ''}`}>
-          <div className="hero-subtitle-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            <span>East Godavari Tourism</span>
+        <div className="hero-content" style={{ opacity: videoLoaded ? 1 : 0, transition: 'opacity 1s ease' }}>
+          <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div className="hero-content-inner">
+              <div className="hero-content-body">
+                <hr aria-orientation="vertical" className="hero-divider" />
+                <h6 className="hero-category">East Godavari Tourism</h6>
+                <h1 style={{ fontFamily: "var(--kt-fonts-heading)", fontSize: '2.5rem', color: 'white', marginBottom: '0.5rem', marginLeft: '1.5rem' }}>Unforgettable Experiences</h1>
+                <p className="hero-description">Discover the magic of East Godavari through immersive journeys that stay with you forever</p>
+              </div>
+            </div>
           </div>
-          <h1>Unforgettable Experiences</h1>
-          <p>Discover the magic of East Godavari through immersive journeys that stay with you forever</p>
-          
-          
         </div>
       </section>
 

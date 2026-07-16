@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './App.css';
-import apLogo from './assets/images/ap-logo.jpg';
 import Home from './pages/Home';
 import Destinations from './pages/Destinations';
 import DestinationDetail from './pages/DestinationDetail';

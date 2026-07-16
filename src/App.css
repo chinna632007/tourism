@@ -2136,7 +2136,7 @@
 
      /* ===== PAGE CONTAINER ===== */
       .page-container {
-        padding-top: 120px;
+        padding-top: 0;
         min-height: 100vh;
         background: #fff;
       }
@@ -2155,9 +2155,19 @@
         padding-top: 140px;
       }
       
+      /* But hero sections within non-home pages should be full-viewport height */
+      main:not(.home-page) .hero-section {
+        height: 100vh;
+        margin-top: -140px;
+      }
+      
       @media (max-width: 767px) {
         main:not(.home-page) {
           padding-top: 80px;
+        }
+        
+        main:not(.home-page) .hero-section {
+          margin-top: -80px;
         }
       }
 

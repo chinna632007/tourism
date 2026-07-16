@@ -67,28 +67,20 @@ const Spirituality = () => {
 
       {/* Hero Section */}
       <section className="spirituality-hero">
-        <div className="spirituality-hero-bg"></div>
-        <div className="spirituality-hero-overlay"></div>
-        <div className="container">
-          <div className="spirituality-hero-content">
-            <div className="spirituality-hero-badge fade-in">
-              <span>🙏</span> Spiritual Journey
-            </div>
-            <h1 className="fade-in">
-              Discover the Divine
-              <span className="hero-highlight"> Soul of East Godavari</span>
-            </h1>
-            <div className="spirituality-quote fade-in">
-              <div className="quote-mark quote-mark-top">"</div>
-              <p className="quote-text">
-                In the land where rivers flow and temples stand tall, 
-                where the call to prayer echoes through minarets and church bells ring in harmony — 
-                East Godavari is not just a destination, it is a pilgrimage of the soul.
-              </p>
-              <div className="quote-mark quote-mark-bottom">"</div>
-            </div>
-          </div>
+        <div className="hero-video-wrapper">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/header.jpg"
+            preload="metadata"
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          >
+            <source src="/spirit.mp4" type="video/mp4" />
+          </video>
         </div>
+        <div className="spirituality-hero-overlay"></div>
       </section>
 
       {/* Category Cards Section */}
