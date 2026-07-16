@@ -367,7 +367,7 @@
         box-shadow: 0 4px 20px rgba(255, 157, 0, 0.2);
       }
 
-      /* Navigation bar */
+     /* Navigation bar */
       .header-nav {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -383,9 +383,21 @@
         }
       }
 
+      .header:hover .header-nav,
+      .header-nav:hover {
+        background: rgba(255, 255, 255, 0.95);
+        border-top-color: rgba(0, 0, 0, 0.08);
+        border-bottom-color: rgba(0, 0, 0, 0.08);
+      }
+
       .header.header-scrolled .header-nav {
         border-top-color: rgba(0, 0, 0, 0.08);
         border-bottom-color: rgba(0, 0, 0, 0.08);
+        background: #ffffff;
+      }
+
+      .header.header-scrolled:hover .header-nav,
+      .header.header-scrolled .header-nav:hover {
         background: #ffffff;
       }
 
@@ -440,7 +452,7 @@
         transform: translateX(-50%) scaleX(0);
         width: 60%;
         height: 2px;
-        background: #ffffff;
+        background: #753232;
         transition: transform 0.3s ease;
       }
 
@@ -450,11 +462,11 @@
       }
 
       .header-nav-link:hover {
-        color: #fff8f6;
+        color: #141413;
       }
 
       .header-nav-link.active {
-        color: #f7f0ef;
+        color: #020202;
       }
 
       .header.header-scrolled .header-nav-link {
@@ -499,7 +511,7 @@
         display: block;
         width: 18px;
         height: 2px;
-        background: #fff;
+        background: #100e0e;
         border-radius: 1px;
         transition: all 0.3s ease;
       }
