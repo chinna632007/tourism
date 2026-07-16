@@ -469,7 +469,7 @@ export const events = [
 ];
 
 export const heroSlides = [
-  { heading: "Godavari River", description: "Experience the majestic Godavari River - the lifeline of East Godavari with its serene beauty and cultural significance.", video: "/godavari.mp4", poster: header_image }
+  { heading: "East Godavari", description: "Experience the majestic East Godavari - the lifeline of East Godavari with its serene beauty and cultural significance.", video: "/godavari.mp4", poster: header_image }
 ];
 
 export const whatsNew = [
