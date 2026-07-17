@@ -43,6 +43,16 @@ const DestinationDetail = () => {
 
   return (
     <div className="destination-page">
+      {/* ===== HERO IMAGE BANNER ===== */}
+      <div style={{ position: 'relative', width: '100%', height: '400px', overflow: 'hidden' }}>
+        <img 
+          src={dest.image} 
+          alt={dest.heading} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%)' }}></div>
+      </div>
+
       {/* ===== STUNNING VIDEO HERO SECTION ===== */}
       <section className="destination-hero">
         <div className="destination-hero-particles">

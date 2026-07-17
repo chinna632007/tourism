@@ -2257,8 +2257,8 @@
         padding-top: 150px;
       }
       
-      main:not(.home-page) .hero-section,
-      main:not(.home-page) .spirituality-hero {
+      main:not(.home-page):not(.spirituality-page-main) .hero-section,
+      main:not(.home-page):not(.spirituality-page-main) .spirituality-hero {
         height: 100vh;
         margin-top: -150px;
       }
@@ -2287,17 +2287,6 @@
      /* Full-screen video for spirituality page */
      main.spirituality-page-main {
        padding-top: 0 !important;
-     }
-
-     main.spirituality-page-main .hero-section {
-       margin-top: -110px;
-       height: 100vh;
-     }
-
-     @media (min-width: 48em) {
-       main.spirituality-page-main .hero-section {
-         margin-top: -150px;
-       }
      }
 
      @media (min-width: 48em) {

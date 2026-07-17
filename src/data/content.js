@@ -532,7 +532,7 @@ export const experienceCategories = {
     link: '#',
     linkText: 'Explore More',
     items: [
-      { image: art_kuchipudi, title: 'Kuchipudi Dance', description: 'Classical dance form with graceful movements', location: 'Rajahmundry, East Godavari' },
+      { image: '/kuchipudi.webp', title: 'Kuchipudi Dance', description: 'Classical dance form with graceful movements', location: 'Rajahmundry, East Godavari' },
       { image: art_folk_dance, title: 'Folk Dance Traditions', description: 'Vibrant traditional folk dance performances', location: 'Kakinada, East Godavari' },
       { image: art_music, title: 'Classical Music', description: 'Traditional Carnatic music and folk songs', location: 'Amalapuram, East Godavari' },
       { image: art_theatre, title: 'Theatre Arts', description: 'Traditional drama and street plays', location: 'Peddapuram, East Godavari' },

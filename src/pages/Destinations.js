@@ -89,7 +89,7 @@ const Destinations = () => {
     { id: 11, category: 'river islands', title: 'Kotipalli River', alt: 'Kotipalli River', src: exploreKotipalliRiver, description: 'Peaceful river island with lush greenery and tranquil waters perfect for nature lovers.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
     { id: 12, category: 'river islands', title: 'Hope Island', alt: 'Hope Island', src: exploreHopeIsland, description: 'Pristine island formed by the confluence of two rivers, offering unique ecosystem and serene environment.', address: 'Hope Island, Near Kakinada, East Godavari' },
     { id: 13, category: 'river islands', title: 'Pallam Island', alt: 'Pallam Island', src: explorePallamIsland, description: 'Beautiful river island with rich biodiversity and traditional village life experiences.', address: 'Pallam Island, East Godavari, Andhra Pradesh' },
-    { id: 14, category: 'river islands', title: 'Godavari Island', alt: 'Godavari Island', src: exploreGodavariIsland, description: 'Largest river island in Godavari with fertile lands and traditional farming communities.', address: 'Godavari Island, East Godavari, Andhra Pradesh' },
+    { id: 14, category: 'river islands', title: 'Godavari Island', alt: 'Godavari Island', src: '/godavari-cards.webp', description: 'Largest river island in Godavari with fertile lands and traditional farming communities.', address: 'Godavari Island, East Godavari, Andhra Pradesh' },
     { id: 15, category: 'river islands', title: 'Yalamanchili Lanka', alt: 'Yalamanchili Lanka', src: exploreYalamanchiliLanka, description: 'Charming island village showcasing authentic rural life and agricultural traditions.', address: 'Yalamanchili Lanka, East Godavari, Andhra Pradesh' },
     
     // Hills (5)
