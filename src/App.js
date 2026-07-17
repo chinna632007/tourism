@@ -69,7 +69,7 @@ const Header = () => {
             </div>
             <div className="header-minister">
               <img src="/minister.jpg" alt="Minister" className="header-minister-img" />
-              <span className="header-minister-name">Durgesh Kandhula</span>
+              <span className="header-minister-name">Sri Durgesh Kandhula</span>
               <span className="header-minister-title">Ministry of East Godavari</span>
             </div>
           </div>
