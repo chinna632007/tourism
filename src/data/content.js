@@ -507,7 +507,7 @@ export const experienceCategories = {
       { image: responsible_farm, title: 'Farm Visit', description: 'A day with farmers in the river islands', location: 'Ramanayuni, East Godavari' },
       { image: responsible_pottery, title: 'Korumam - Find the Potter', description: 'A day with artisans in Korumam', location: 'Korumam, East Godavari' },
       { image: responsible_coconut, title: 'Coconut Farm Experience', description: 'Learn sustainable coconut farming practices', location: 'Kakinada, East Godavari' },
-      { image: responsible_nursery, title: 'Kadiyam Nursery Tour', description: 'Explore the famous nursery gardens of Kadiyam', location: 'Kadiyam, East Godavari' },
+      { image: '/kadiyam-nursery.webp', title: 'Kadiyam Nursery Tour', description: 'Explore the famous nursery gardens of Kadiyam', location: 'Kadiyam, East Godavari' },
       { image: responsible_bamboo, title: 'Bamboo Craft Experience', description: 'Traditional bamboo crafting with local artisans', location: 'Rajahmundry, East Godavari' },
       { image: responsible_dairy, title: 'Dairy Farm Visit', description: 'Experience organic dairy farming firsthand', location: 'Peddapuram, East Godavari' }
     ]
@@ -581,5 +581,3 @@ export const footerSections = [
 ];
 
 export { gallary_Kalaripayattu, gallary_peddapuram_beach, memories_cuisine, memories_village_life, memories_trekking, memories_agri_tourism, memories_artforms, memories_monsoon, memories_river_cruise, godavari_pushkaram, godavari_river, peddapuram, jack_fruit, rajahmundry_image, brochure_amalapuram, gallary_elephant_herd, responsible_farm, responsible_pottery, responsible_coconut, responsible_nursery, responsible_bamboo, responsible_dairy, eco_wildlife, eco_mangrove, eco_bird, eco_nature_trekking, eco_mountain_biking, eco_forest_camping, art_kuchipudi, art_folk_dance, art_music, art_theatre, art_puppetry, art_crafts, cuisine_seafood, cuisine_rice_dishes, cuisine_snacks, cuisine_sweets, cuisine_spices, cuisine_coconut };
-
-
