@@ -47,12 +47,9 @@ const Hero = () => {
           <div className="hero-content-inner">
             <div className="hero-content-body">
               <hr aria-orientation="vertical" className="hero-divider" />
-              <h6 className="hero-category">{slide.heading}</h6>
-              <p className="hero-description">{slide.description}</p>
-              <Link to="/destinations" className="hero-btn" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center' }}>
-                More
-                <ArrowIcon color="#fff" />
-              </Link>
+              <h6 className="hero-category" style={{ fontSize: '3.25rem', fontWeight: 'bold' }}>{slide.heading}</h6>
+
+              
             </div>
           </div>
         </div>

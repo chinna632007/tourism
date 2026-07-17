@@ -89,12 +89,7 @@ const Spirituality = () => {
                   Discover the Divine
                   <span className="hero-highlight"> Soul of East Godavari</span>
                 </h1>
-                <p className="hero-description">
-                  Explore ancient temples, serene churches, and peaceful mosques in East Godavari.
-                </p>
-                <Link to="/destinations" className="hero-btn">
-                  Explore More
-                </Link>
+               
               </div>
             </div>
           </div>
