@@ -53,54 +53,6 @@ const DestinationDetail = () => {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%)' }}></div>
       </div>
 
-      {/* ===== STUNNING VIDEO HERO SECTION ===== */}
-      <section className="destination-hero">
-        <div className="destination-hero-particles">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="destination-hero-particle" style={{
-              width: `${4 + Math.random() * 4}px`,
-              height: `${4 + Math.random() * 4}px`,
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${6 + Math.random() * 4}s`
-            }} />
-          ))}
-        </div>
-
-        {/* Decorative elements */}
-        <div className="hero-decorative-line hero-decorative-line-1"></div>
-        <div className="hero-decorative-line hero-decorative-line-2"></div>
-        <div className="hero-decorative-circle hero-decorative-circle-1"></div>
-        <div className="hero-decorative-circle hero-decorative-circle-2"></div>
-
-        <div className="destination-hero-content">
-          <div className="destination-hero-badge">
-            <span>📍</span>
-            <span>{destData.breadcrumb}</span>
-          </div>
-          <h1>{dest.heading}</h1>
-          <p className="hero-subtitle">
-            {dest.description?.title || `Discover the enchanting beauty and rich cultural heritage of ${dest.heading}, where every corner tells a story of timeless traditions and breathtaking landscapes.`}
-          </p>
-          
-          {/* Hero Stats */}
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <span className="hero-stat-number">100+</span>
-              <span className="hero-stat-label">Tourists Daily</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-number">4.8</span>
-              <span className="hero-stat-label">Rating</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-number">24/7</span>
-              <span className="hero-stat-label">Support</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Top Navigation Links */}
       <div style={{ background: '#FFF9E1', padding: '1rem 0', borderBottom: '1px solid #e0e0e0' }}>
