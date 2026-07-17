@@ -7,6 +7,7 @@ import exploreRamanayuniTemple from '../assets/images/explore-ramanayuni-temple.
 import exploreKorukondaTemple from '../assets/images/explore-korukonda-temple.jpg';
 import exploreKakindaRamalayam from '../assets/images/explore-kakinda-ramalayam.jpg';
 import exploreVinayakaTemple from '../assets/images/explore-vinayaka-temple.jpg';
+import weedingdestination  from '../assets/images/weedingdestination.jpg';
 const ArrowIcon = ({ color = "#fff" }) => (
   <svg width="0.5em" height="0.5em" viewBox="0 0 24.336 24.336">
     <g transform="translate(8 24.336) rotate(-135)">
@@ -81,7 +82,7 @@ const WhatsNew = () => {
     {
       heading: "Destination Wedding",
       description: "Whether it's sandy beaches, serene hills, or tranquil river islands, East Godavari offers a variety of perfect destination spots to provide the most memorable backdrop for your special day.",
-      image: peddapuram,
+      image: weedingdestination,
       btnText: "Explore",
       link: "#"
     }
@@ -176,15 +177,15 @@ const StunningWonders = () => {
 }
 
 const MemoriesForALifetime = () => {
-  const bgVideo = "https://placehold.co/1920x1080/2E7D32/FFFFFF?text=East+Godavari+Tourism";
+  const bgVideo = "https://www.youtube.com/watch?v=6RWTmulkXXg&list=RD6RWTmulkXXg&start_radio=1";
   const items = [
-    { heading: "Village Life Experience", image: memories_village_life },
-    { heading: "Trekking and Safaris", image: memories_trekking },
-    { heading: "Agri Tourism", image: memories_agri_tourism },
-    { heading: "Cuisine", image: memories_cuisine },
-    { heading: "Artforms", image: memories_artforms },
-    { heading: "Monsoon", image: memories_monsoon },
-    { heading: "River Cruise", image: memories_river_cruise }
+    { heading: "Village Life Experience", image: memories_village_life, description: "Experience the authentic rural charm and traditional village life of East Godavari.", shortText: "Authentic rural charm" },
+    { heading: "Trekking and Safaris", image: memories_trekking, description: "Embark on thrilling treks and wildlife safaris through scenic landscapes.", shortText: "Adventure awaits!" },
+    { heading: "Eco Tourism", image: memories_agri_tourism, description: "Discover farm life and agricultural traditions in the fertile lands.", shortText: "Farm to table" },
+    { heading: "Cuisine", image: memories_cuisine, description: "Savor the unique flavours and traditional cuisine of East Godavari.", shortText: "Taste the tradition" },
+    { heading: "Artforms", image: memories_artforms, description: "Explore vibrant artforms and cultural expressions unique to the region.", shortText: "Culture & heritage" },
+    { heading: "Monsoon", image: memories_monsoon, description: "Experience the magic of monsoon as the landscapes come alive.", shortText: "Nature at its best" },
+    { heading: "River Cruise", image: memories_river_cruise, description: "Enjoy serene river cruises along the mighty Godavari River.", shortText: "Peaceful waterways" }
   ];
   return (
     <section className="memories-section">
@@ -193,12 +194,137 @@ const MemoriesForALifetime = () => {
       <div className="memories-content">
         <div className="container">
           <SectionHeader heading="Memories for a Lifetime" description="Here is a bouquet of unforgettable experiences East Godavari offers: charming village life, thrilling treks, serene safaris, vibrant farms, unique cuisine, tranquil river cruises and the magic of monsoon. Each moment in East Godavari is a story waiting to be told, a memory etched in time." light />
-          <div className="memories-grid">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: '2rem'
+          }}>
             {items.map((item, i) => (
               <Link key={i} to="/experiences" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="memories-card">
-                  <img src={item.image} alt={item.heading} loading="lazy" width="500" height="750" decoding="async" data-nimg="1" style={{ color: "transparent", width: "100%", height: "100%", borderRadius: "var(--east-godavari-tourism-radii-md)", backgroundSize: "cover", backgroundPosition: "50% 50%", backgroundRepeat: "no-repeat" }} />
-                  <div className="memories-card-label">{item.heading}</div>
+                <div
+                  className="memories-card"
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px) scale(1.01)';
+                    e.currentTarget.style.boxShadow = '0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06)';
+                    const title = e.currentTarget.querySelector('.mem-title');
+                    const btn = e.currentTarget.querySelector('.mem-explore-btn');
+                    if (title) {
+                      title.style.background = 'linear-gradient(135deg, #FF9D00, #FF6B35)';
+                      title.style.webkitBackgroundClip = 'text';
+                      title.style.webkitTextFillColor = 'transparent';
+                      title.style.backgroundClip = 'text';
+                    }
+                    if (btn) {
+                      btn.style.background = 'linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%)';
+                      btn.style.color = '#ffffff';
+                    }
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)';
+                    const title = e.currentTarget.querySelector('.mem-title');
+                    const btn = e.currentTarget.querySelector('.mem-explore-btn');
+                    if (title) {
+                      title.style.background = 'transparent';
+                      title.style.webkitTextFillColor = '#1a1a2e';
+                    }
+                    if (btn) {
+                      btn.style.background = '#f8f9fc';
+                      btn.style.color = 'black';
+                    }
+                  }}
+                >
+                  <div style={{
+                    position: 'relative',
+                    width: '100%',
+                    aspectRatio: '4 / 3',
+                    overflow: 'hidden'
+                  }}>
+                    <img
+                      src={item.image}
+                      alt={item.heading}
+                      loading="lazy"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.7s cubic-bezier(0.23, 1, 0.32, 1)'
+                      }}
+                      onMouseOver={(e) => { e.target.style.transform = 'scale(1.1)'; }}
+                      onMouseOut={(e) => { e.target.style.transform = 'scale(1)'; }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%)',
+                      opacity: 0,
+                      transition: 'opacity 0.5s ease'
+                    }}></div>
+                  </div>
+                  <div style={{
+                    padding: '1.5rem 1.5rem 0',
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    position: 'relative',
+                    background: 'white'
+                  }}>
+                    <h3
+                      className="mem-title"
+                      style={{
+                        fontSize: '1.2rem',
+                        fontWeight: '700',
+                        color: '#1a1a2e',
+                        marginBottom: '0.5rem',
+                        fontFamily: 'Georgia, serif',
+                        lineHeight: '1.3',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      {item.heading}
+                    </h3>
+                    <p style={{
+                      fontSize: '0.88rem',
+                      color: '#6b7280',
+                      margin: 0,
+                      lineHeight: '1.6',
+                      flex: 1
+                    }}>
+                      {item.description}
+                    </p>
+                    <p style={{
+                      fontSize: '0.82rem',
+                      color: '#718096',
+                      fontStyle: 'italic',
+                      marginTop: '0.75rem',
+                      marginBottom: '0.5rem'
+                    }}>
+                      {item.shortText}
+                    </p>
+                  </div>
+                  <div
+                    className="mem-explore-btn"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '1rem 2.5rem',
+                      background: '#f8f9fc',
+                      fontSize: '1rem',
+                      fontWeight: '600',
+                      color: 'black',
+                      height: '50px',
+                      border: 'none',
+                      transition: 'all 0.3s ease',
+                      marginTop: 'auto',
+                      borderRadius: '100px',
+                      letterSpacing: '0.5px'
+                    }}
+                  >
+                    <span>Explore</span>
+                    <span style={{ fontSize: '18px' }}>→</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -243,11 +369,18 @@ const Events = () => (
         {events.slice(0, 8).map((event, i) => (
           <Link key={i} to={`/events/${event.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <article className="event-card" style={{ cursor: 'pointer' }}>
-              <img src={event.image} alt={event.heading} loading="lazy" />
-              <div className="event-card-overlay">
-                <span className="event-date-badge">{event.date}</span>
+              <div className="event-image-wrapper">
+                <img src={event.image} alt={event.heading} loading="lazy" />
+                <div className="event-image-overlay"></div>
+                <span className="event-date-badge" style={{ position: 'absolute', top: '14px', right: '14px', zIndex: 2 }}>{event.date}</span>
+              </div>
+              <div className="event-content">
                 <h4>{event.heading}</h4>
                 {event.description && <p>{event.description}</p>}
+              </div>
+              <div className="event-explore-btn">
+                <span>Explore</span>
+                <span className="arrow" style={{ fontSize: '18px' }}>→</span>
               </div>
             </article>
           </Link>
@@ -271,8 +404,8 @@ const PopularDestinations = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px,1fr))",
-            gap: "1.5rem",
+            gridTemplateColumns: "repeat(auto-fill, minmax(320px,1fr))",
+            gap: "2rem",
           }}
         >
           {items.map((dest, i) => (
@@ -283,36 +416,124 @@ const PopularDestinations = () => {
             >
               <div
                 style={{
-                  height: "300px",
-                  borderRadius: "8px",
+                  borderRadius: "20px",
                   overflow: "hidden",
-                  position: "relative",
+                  background: "white",
+                  boxShadow: "0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)",
+                  transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)",
                   cursor: "pointer",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  border: "1px solid rgba(0, 0, 0, 0.04)",
+                  position: "relative"
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = "translateY(-10px) scale(1.01)";
+                  e.currentTarget.style.boxShadow = "0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06)";
+                  const btn = e.currentTarget.querySelector(".pd-explore-btn");
+                  if (btn) {
+                    btn.style.background = "linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%)";
+                    btn.style.color = "#ffffff";
+                  }
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)";
+                  const btn = e.currentTarget.querySelector(".pd-explore-btn");
+                  if (btn) {
+                    btn.style.background = "#f8f9fc";
+                    btn.style.color = "#1a1a2e";
+                  }
                 }}
               >
-                <img
-                  src={dest.image}
-                  alt={dest.heading}
+                <div
                   style={{
+                    position: "relative",
                     width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
+                    aspectRatio: "4 / 3",
+                    overflow: "hidden"
                   }}
-                />
+                >
+                  <img
+                    src={dest.image}
+                    alt={dest.heading}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      transition: "transform 0.7s cubic-bezier(0.23, 1, 0.32, 1)"
+                    }}
+                    onMouseOver={(e) => { e.target.style.transform = "scale(1.1)"; }}
+                    onMouseOut={(e) => { e.target.style.transform = "scale(1)"; }}
+                  />
+                  <div style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%)",
+                    opacity: 0,
+                    transition: "opacity 0.5s ease"
+                  }}></div>
+                </div>
 
                 <div
                   style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    padding: "24px",
-                    background: "rgba(0,0,0,0.7)",
-                    color: "white",
+                    padding: "1.5rem 1.5rem 0",
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "relative",
+                    background: "white"
                   }}
                 >
-                  <h4>{dest.heading}</h4>
-                  <p>{dest.description}</p>
+                  <h3
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: "700",
+                      color: "#1a1a2e",
+                      marginBottom: "0.5rem",
+                      fontFamily: "Georgia, serif",
+                      lineHeight: "1.3",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    {dest.heading}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.88rem",
+                      color: "#6b7280",
+                      margin: 0,
+                      lineHeight: "1.6",
+                      flex: 1
+                    }}
+                  >
+                    {dest.description}
+                  </p>
+                </div>
+
+                <div
+                  className="pd-explore-btn"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "1rem 2.5rem",
+                    background: "#f8f9fc",
+                    fontSize: "1rem",
+                    fontWeight: "600",
+                    color: "black",
+                    height: "50px",
+                    border: "none",
+                    transition: "all 0.3s ease",
+                    marginTop: "auto",
+                    borderRadius: "100px",
+                    letterSpacing: "0.5px"
+                  }}
+                >
+                  <span>Explore</span>
+                  <span style={{ fontSize: "18px" }}>→</span>
                 </div>
               </div>
             </Link>
@@ -332,8 +553,6 @@ const Spirituality = () => {
     { title: "Vinayaka Temple", image: exploreVinayakaTemple, description: "Temple dedicated to Lord Ganesha", link: "/destination-page/35" }
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <section className="section" style={{ background: 'linear-gradient(135deg, #fdf6f0 0%, #fff5eb 50%, #fef0e6 100%)', overflow: 'hidden' }}>
       <div className="container">
@@ -342,7 +561,7 @@ const Spirituality = () => {
         </div>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
           gap: '2rem',
           padding: '1rem 0'
         }}>
@@ -354,64 +573,135 @@ const Spirituality = () => {
             >
               <div
                 style={{
-                  position: 'relative',
                   borderRadius: '20px',
                   overflow: 'hidden',
-                  height: '400px',
-                  cursor: 'pointer',
-                  boxShadow: activeIndex === i ? '0 20px 60px rgba(255, 154, 77, 0.3), 0 8px 24px rgba(0, 0, 0, 0.1)' : '0 4px 12px rgba(0, 0, 0, 0.08)',
-                  transform: activeIndex === i ? 'translateY(-8px) scale(1.02)' : 'translateY(0) scale(1)',
+                  background: 'white',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)',
                   transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
-                  border: activeIndex === i ? '2px solid #ff9a4d' : '2px solid transparent',
+                  cursor: 'pointer',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: '1px solid rgba(0, 0, 0, 0.04)',
+                  position: 'relative'
                 }}
-                onMouseEnter={() => setActiveIndex(i)}
-                onMouseLeave={() => setActiveIndex(0)}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px) scale(1.01)';
+                  e.currentTarget.style.boxShadow = '0 24px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06)';
+                  const title = e.currentTarget.querySelector('.spirit-title');
+                  const btn = e.currentTarget.querySelector('.spirit-explore-btn');
+                  if (title) {
+                    title.style.background = 'linear-gradient(135deg, #FF9D00, #FF6B35)';
+                    title.style.webkitBackgroundClip = 'text';
+                    title.style.webkitTextFillColor = 'transparent';
+                    title.style.backgroundClip = 'text';
+                  }
+                  if (btn) {
+                    btn.style.background = 'linear-gradient(135deg, #FF9D00 0%, #FF6B35 100%)';
+                    btn.style.color = '#ffffff';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)';
+                  const title = e.currentTarget.querySelector('.spirit-title');
+                  const btn = e.currentTarget.querySelector('.spirit-explore-btn');
+                  if (title) {
+                    title.style.background = 'transparent';
+                    title.style.webkitTextFillColor = '#1a1a2e';
+                  }
+                  if (btn) {
+                    btn.style.background = '#f8f9fc';
+                    btn.style.color = 'black';
+                  }
+                }}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
+                <div
                   style={{
+                    position: 'relative',
                     width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform 0.7s cubic-bezier(0.23, 1, 0.32, 1)',
-                    transform: activeIndex === i ? 'scale(1.1)' : 'scale(1)',
+                    aspectRatio: '4 / 3',
+                    overflow: 'hidden'
                   }}
-                />
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)',
-                  padding: '2rem 1.5rem 1.5rem',
-                  color: 'white',
-                }}>
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      transition: 'transform 0.7s cubic-bezier(0.23, 1, 0.32, 1)'
+                    }}
+                    onMouseOver={(e) => { e.target.style.transform = 'scale(1.1)'; }}
+                    onMouseOut={(e) => { e.target.style.transform = 'scale(1)'; }}
+                  />
                   <div style={{
-                    width: '40px',
-                    height: '3px',
-                    background: 'linear-gradient(90deg, #ff9a4d, #ff6b35)',
-                    borderRadius: '2px',
-                    marginBottom: '0.75rem',
-                  }} />
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: '700',
-                    margin: '0 0 0.35rem 0',
-                    fontFamily: 'Georgia, serif',
-                    letterSpacing: '0.5px',
-                  }}>
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%)',
+                    opacity: 0,
+                    transition: 'opacity 0.5s ease'
+                  }}></div>
+                </div>
+                <div
+                  style={{
+                    padding: '1.5rem 1.5rem 0',
+                    flex: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    position: 'relative',
+                    background: 'white'
+                  }}
+                >
+                  <h3
+                    className="spirit-title"
+                    style={{
+                      fontSize: '1.2rem',
+                      fontWeight: '700',
+                      color: '#1a1a2e',
+                      marginBottom: '0.5rem',
+                      fontFamily: 'Georgia, serif',
+                      lineHeight: '1.3',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
                     {item.title}
                   </h3>
-                  <p style={{
-                    fontSize: '0.85rem',
-                    margin: 0,
-                    opacity: 0.9,
-                    lineHeight: '1.4',
-                    fontWeight: '400',
-                  }}>
+                  <p
+                    style={{
+                      fontSize: '0.88rem',
+                      color: '#6b7280',
+                      margin: 0,
+                      lineHeight: '1.6',
+                      flex: 1
+                    }}
+                  >
                     {item.description}
                   </p>
+                </div>
+                <div
+                  className="spirit-explore-btn"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    padding: '1rem 2.5rem',
+                    background: '#f8f9fc',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    color: 'black',
+                    height: '50px',
+                    border: 'none',
+                    transition: 'all 0.3s ease',
+                    marginTop: 'auto',
+                    borderRadius: '100px',
+                    letterSpacing: '0.5px'
+                  }}
+                >
+                  <span>Explore</span>
+                  <span style={{ fontSize: '18px' }}>→</span>
                 </div>
               </div>
             </Link>
