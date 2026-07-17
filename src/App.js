@@ -285,7 +285,7 @@ function AppContent() {
       <Header />
       <ScrollToTop />
       <ScrollToTopButton />
-      <main className={location.pathname === '/' ? 'home-page' : ''}>
+      <main className={location.pathname === '/' ? 'home-page' : location.pathname === '/spirituality' ? 'spirituality-page-main' : ''}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending-places" element={<TrendingPlaces />} />

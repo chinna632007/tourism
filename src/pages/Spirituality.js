@@ -66,7 +66,7 @@ const Spirituality = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="spirituality-hero">
+      <section className="hero-section">
         <div className="hero-video-wrapper">
           <video
             autoPlay
@@ -79,8 +79,7 @@ const Spirituality = () => {
             <source src="/spirit.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="spirituality-hero-overlay"></div>
-        <div className="hero-content">
+        <div className="hero-content" style={{ opacity: 1 }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <div className="hero-content-inner">
               <div className="hero-content-body">
