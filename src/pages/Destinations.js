@@ -38,6 +38,7 @@ import explorePeddapuramMarket from '../assets/images/explore-peddapuram-market.
 import exploreAnnavaramMart from '../assets/images/explore-annavaram-mart.jpg';
 import exploreHopeIsland from '../assets/images/explore-hope-island.jpg';
 import explorePallamIsland from '../assets/images/explore-pallam-island.jpg';
+import exploreCottonBridge from '../assets/images/heritage-cottonbridge.webp';
 
 const Destinations = () => {
   const [searchParams] = useSearchParams();
@@ -83,7 +84,8 @@ const Destinations = () => {
     { id: 7, category: 'heritage', title: 'Ramanayuni Temple', alt: 'Ramanayuni Temple', src: exploreRamanayuniTemple, description: 'Ancient temple with intricate carvings and rich spiritual heritage dating back centuries.', address: 'Ramanayuni, East Godavari, Andhra Pradesh' },
     { id: 8, category: 'heritage', title: 'Peddapuram Fort', alt: 'Peddapuram Fort', src: explorePeddapuramFort, description: 'Magnificent historical fort showcasing the architectural brilliance of ancient India.', address: 'Peddapuram, East Godavari, Andhra Pradesh' },
     { id: 9, category: 'heritage', title: 'Rajahmundry Bridge', alt: 'Rajahmundry Bridge', src: exploreRajahmundryBridge, description: 'Iconic bridge across Godavari River, an engineering marvel and popular tourist attraction.', address: 'Rajahmundry, East Godavari, Andhra Pradesh' },
-    { id: 10, category: 'heritage', title: 'Kotipalli Temple', alt: 'Kotipalli Temple', src: exploreKotipalliTemple, description: 'Sacred temple dedicated to Lord Shiva with beautiful architecture and religious significance.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
+    { id: 10, category: 'heritage', title: 'Mhakaleshwar Temple', alt: 'Mahakaleshwar  Temple', src: exploreKotipalliTemple, description: 'Sacred temple dedicated to Lord Shiva with beautiful architecture and religious significance.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
+    { id: 41, category: 'heritage', title: 'Cotton Bridge', alt: 'Cotton Bridge', src: exploreCottonBridge, description: 'Historic cotton bridge showcasing colonial-era engineering and architecture over the Godavari.', address: 'Rajahmundry, East Godavari, Andhra Pradesh' },
     
     // River Islands (5)
     { id: 11, category: 'river islands', title: 'Kotipalli River', alt: 'Kotipalli River', src: exploreKotipalliRiver, description: 'Peaceful river island with lush greenery and tranquil waters perfect for nature lovers.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
@@ -94,7 +96,7 @@ const Destinations = () => {
     
     // Hills (5)
     { id: 16, category: 'hills', title: 'Gudisa Hill', alt: 'Gudisa Hill', src: exploreGudisaHill, description: 'Scenic hill station with misty peaks and stunning viewpoints for adventure enthusiasts.', address: 'Gudisa Hills, East Godavari, Andhra Pradesh' },
-    { id: 17, category: 'hills', title: 'Pithampur Hills', alt: 'Pithampur Hills', src: explorePithampurHills, description: 'Rolling hills with tea gardens and pleasant climate, ideal for trekking and nature walks.', address: 'Pithampur, East Godavari, Andhra Pradesh' },
+    { id: 17, category: 'hills', title: 'Pithapuram Hills', alt: 'Pithampur Hills', src: explorePithampurHills, description: 'Rolling hills with tea gardens and pleasant climate, ideal for trekking and nature walks.', address: 'Pithampur, East Godavari, Andhra Pradesh' },
     { id: 18, category: 'hills', title: 'Maridimilli Hill', alt: 'Maridimilli Hill', src: exploreMaridimilliHill, description: 'Picturesque hill with dense forests and rich wildlife, perfect for eco-tourism.', address: 'Maridimilli, East Godavari, Andhra Pradesh' },
     { id: 19, category: 'hills', title: 'Kakinada Hill View', alt: 'Kakinada Hill View', src: exploreKakinadaHillView, description: 'Panoramic viewpoint offering breathtaking views of the coastal landscape and city.', address: 'Kakinada Hill View Point, East Godavari' },
     { id: 20, category: 'hills', title: 'Papi Hills', alt: 'Papi Hills', src: explorePapiHill, description: 'Majestic hills with deep gorges and the mighty Godavari flowing through them.', address: 'Papi Hills, Near Bhadrachalam, East Godavari' },
@@ -117,7 +119,7 @@ const Destinations = () => {
     { id: 31, category: 'spirituality', title: 'Kotipalli Temple', alt: 'Kotipalli Temple', src: exploreKotipalliTemple, description: 'Ancient temple with divine atmosphere and traditional South Indian architecture.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
     { id: 32, category: 'spirituality', title: 'Ramanayuni Temple', alt: 'Ramanayuni Temple', src: exploreRamanayuniTemple, description: 'Sacred shrine with historical significance and beautiful religious ceremonies.', address: 'Ramanayuni, East Godavari, Andhra Pradesh' },
     { id: 33, category: 'spirituality', title: 'Korukonda Temple', alt: 'Korukonda Temple', src: exploreKorukondaTemple, description: 'Peaceful temple complex with intricate sculptures and spiritual ambiance.', address: 'Korukonda, East Godavari, Andhra Pradesh' },
-    { id: 34, category: 'spirituality', title: 'Kakinada Ramalayam', alt: 'Kakinada Ramalayam', src: exploreKakindaRamalayam, description: 'Beautiful temple dedicated to Lord Rama with vibrant festivals and community events.', address: 'Kakinada Ramalayam, Kakinada, East Godavari' },
+    { id: 34, category: 'spirituality', title: 'Mavidada Ramalayam', alt: 'Kakinada Ramalayam', src: exploreKakindaRamalayam, description: 'Beautiful temple dedicated to Lord Rama with vibrant festivals and community events.', address: 'Kakinada Ramalayam, Kakinada, East Godavari' },
     { id: 35, category: 'spirituality', title: 'Vinayaka Temple', alt: 'Vinayaka Temple', src: exploreVinayakaTemple, description: 'Revered temple of Lord Ganesha with divine blessings and traditional rituals.', address: 'Vinayaka Temple, East Godavari, Andhra Pradesh' },
     
     // Shopping (5)

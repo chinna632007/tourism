@@ -92,7 +92,8 @@ const destinationDetails = {
   37: { title: 'Kakinada Shopping', description: 'Shopping destination in Kakinada', fullDescription: ['Kakinada Shopping offers a variety of local and modern shopping options.'], location: 'Kakinada, East Godavari', category: 'shopping', image: exploreKakinadaShopping },
   38: { title: 'Amalapuram Market', description: 'Traditional market area', fullDescription: ['Amalapuram Market is known for its local products and traditional goods.'], location: 'Amalapuram, East Godavari', category: 'shopping', image: exploreAmalapuramMarket },
   39: { title: 'Peddapuram Market', description: 'Local market with variety', fullDescription: ['Peddapuram Market offers fresh produce and local specialties.'], location: 'Peddapuram, East Godavari', category: 'shopping', image: explorePeddapuramMarket },
-  40: { title: 'Annavaram Mart', description: 'Shopping destination near temple', fullDescription: ['Annavaram Mart is located near the famous Annavaram temple.'], location: 'Rajahmundry, East Godavari', category: 'shopping', image: exploreAnnavaramMart }
+  40: { title: 'Annavaram Mart', description: 'Shopping destination near temple', fullDescription: ['Annavaram Mart is located near the famous Annavaram temple.'], location: 'Rajahmundry, East Godavari', category: 'shopping', image: exploreAnnavaramMart },
+  41: { title: 'Cotton Bridge', description: 'Historic cotton bridge over Godavari', fullDescription: ['Cotton Bridge is a historic colonial-era bridge over the Godavari River, known for its remarkable engineering and architectural significance.'], location: 'Rajahmundry, East Godavari', category: 'heritage', image: '/heritage-cottonbridge.webp' }
 };
 
 const DestinationDetailPage = () => {
