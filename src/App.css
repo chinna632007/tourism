@@ -367,7 +367,35 @@
         box-shadow: 0 4px 20px rgba(255, 157, 0, 0.2);
       }
 
-     /* Navigation bar */
+      .header-social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .header.header-scrolled .header-social-btn {
+        background: rgba(0, 0, 0, 0.05);
+        color: #333;
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+
+      .header-social-btn:hover {
+        background: linear-gradient(135deg, #ff9d00, #ffb347);
+        color: #fff;
+        border-color: #ff9d00;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 157, 0, 0.3);
+      }
+
+      /* Navigation bar */
       .header-nav {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);

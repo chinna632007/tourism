@@ -9,7 +9,7 @@ import exploreKorukondaFort from '../assets/images/explore-korukonda-fort.jpg';
 import exploreRamanayuniTemple from '../assets/images/explore-ramanayuni-temple.jpg';
 import explorePeddapuramFort from '../assets/images/explore-peddapuram-fort.jpg';
 import exploreRajahmundryBridge from '../assets/images/explore-rajahmundry-bridge.jpg';
-import exploreKotipalliTemple from '../assets/images/explore-kotipalli-temple.jpg';
+import exploreMahakaleshwarTemple from '../assets/images/explore-kotipalli-temple.jpg';
 import exploreKotipalliRiver from '../assets/images/explore-kotipalli-river.jpg';
 import exploreKakinadaHillView from '../assets/images/explore-kakinada-hill-view.jpg';
 import exploreGodavariIsland from '../assets/images/explore-godavari-island.jpg';
@@ -28,7 +28,7 @@ import exploreCoringaWildlife from '../assets/images/explore-coringa-willdlife.j
 import exploreRamanayuniWildlife from '../assets/images/explore-ramanayuni-wildlife.jpg';
 import explorePapikondaWildlife from '../assets/images/explore-papikonda-wildlife.jpg';
 import exploreAtreyapuramWildlife from '../assets/images/explore-atreyapuram-wildlife.jpg';
-import exploreKakindaRamalayam from '../assets/images/explore-kakinda-ramalayam.jpg';
+import exploreMavidadaRamalayam from '../assets/images/explore-kakinda-ramalayam.jpg';
 import exploreVinayakaTemple from '../assets/images/explore-vinayaka-temple.jpg';
 import exploreKorukondaTemple from '../assets/images/explore-korukonda-temple.jpg';
 import explorePithampurMarket from '../assets/images/explore-pithampur-market.jpg';
@@ -39,6 +39,7 @@ import exploreAnnavaramMart from '../assets/images/explore-annavaram-mart.jpg';
 import exploreHopeIsland from '../assets/images/explore-hope-island.jpg';
 import explorePallamIsland from '../assets/images/explore-pallam-island.jpg';
 import exploreCottonBridge from '../assets/images/heritage-cottonbridge.webp';
+import exploreDeviChowk from '../assets/images/spirituality-devichowk.webp';
 
 const Destinations = () => {
   const [searchParams] = useSearchParams();
@@ -84,7 +85,7 @@ const Destinations = () => {
     { id: 7, category: 'heritage', title: 'Ramanayuni Temple', alt: 'Ramanayuni Temple', src: exploreRamanayuniTemple, description: 'Ancient temple with intricate carvings and rich spiritual heritage dating back centuries.', address: 'Ramanayuni, East Godavari, Andhra Pradesh' },
     { id: 8, category: 'heritage', title: 'Peddapuram Fort', alt: 'Peddapuram Fort', src: explorePeddapuramFort, description: 'Magnificent historical fort showcasing the architectural brilliance of ancient India.', address: 'Peddapuram, East Godavari, Andhra Pradesh' },
     { id: 9, category: 'heritage', title: 'Rajahmundry Bridge', alt: 'Rajahmundry Bridge', src: exploreRajahmundryBridge, description: 'Iconic bridge across Godavari River, an engineering marvel and popular tourist attraction.', address: 'Rajahmundry, East Godavari, Andhra Pradesh' },
-    { id: 10, category: 'heritage', title: 'Mhakaleshwar Temple', alt: 'Mahakaleshwar  Temple', src: exploreKotipalliTemple, description: 'Sacred temple dedicated to Lord Shiva with beautiful architecture and religious significance.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
+    { id: 10, category: 'heritage', title: 'Mahakaleshwar Temple', alt: 'Mahakaleshwar  Temple', src: exploreMahakaleshwarTemple, description: 'Sacred temple dedicated to Lord Shiva with beautiful architecture and religious significance.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
     { id: 41, category: 'heritage', title: 'Cotton Bridge', alt: 'Cotton Bridge', src: exploreCottonBridge, description: 'Historic cotton bridge showcasing colonial-era engineering and architecture over the Godavari.', address: 'Rajahmundry, East Godavari, Andhra Pradesh' },
     
     // River Islands (5)
@@ -116,14 +117,15 @@ const Destinations = () => {
     { id: 30, category: 'wildlife', title: 'Papikonda Wildlife', alt: 'Papikonda Wildlife', src: explorePapikondaWildlife, description: 'Expansive wildlife area with diverse ecosystems and conservation efforts.', address: 'Papikonda Wildlife Sanctuary, East Godavari' },
     
     // Spirituality (5)
-    { id: 31, category: 'spirituality', title: 'Kotipalli Temple', alt: 'Kotipalli Temple', src: exploreKotipalliTemple, description: 'Ancient temple with divine atmosphere and traditional South Indian architecture.', address: 'Kotipalli, East Godavari, Andhra Pradesh' },
+    { id: 31, category: 'spirituality', title: 'Mahakaleshwar  Temple', alt: 'Mahakaleshwar  Temple', src: exploreMahakaleshwarTemple, description: 'Ancient temple with divine atmosphere and traditional South Indian architecture.', address: 'Mahakaleshwar  Temple, East Godavari, Andhra Pradesh' },
     { id: 32, category: 'spirituality', title: 'Ramanayuni Temple', alt: 'Ramanayuni Temple', src: exploreRamanayuniTemple, description: 'Sacred shrine with historical significance and beautiful religious ceremonies.', address: 'Ramanayuni, East Godavari, Andhra Pradesh' },
     { id: 33, category: 'spirituality', title: 'Korukonda Temple', alt: 'Korukonda Temple', src: exploreKorukondaTemple, description: 'Peaceful temple complex with intricate sculptures and spiritual ambiance.', address: 'Korukonda, East Godavari, Andhra Pradesh' },
-    { id: 34, category: 'spirituality', title: 'Mavidada Ramalayam', alt: 'Kakinada Ramalayam', src: exploreKakindaRamalayam, description: 'Beautiful temple dedicated to Lord Rama with vibrant festivals and community events.', address: 'Kakinada Ramalayam, Kakinada, East Godavari' },
+    { id: 34, category: 'spirituality', title: 'Mavidada Ramalayam', alt: 'Mavidada Ramalayam', src: exploreMavidadaRamalayam, description: 'Beautiful temple dedicated to Lord Rama with vibrant festivals and community events.', address: 'Mavidada Ramalayam, East Godavari, Andhra Pradesh' },
     { id: 35, category: 'spirituality', title: 'Vinayaka Temple', alt: 'Vinayaka Temple', src: exploreVinayakaTemple, description: 'Revered temple of Lord Ganesha with divine blessings and traditional rituals.', address: 'Vinayaka Temple, East Godavari, Andhra Pradesh' },
+    { id: 42, category: 'spirituality', title: 'Devi Chowk Mandir', alt: 'Devi Chowk Mandir', src: exploreDeviChowk, description: 'Sacred temple dedicated to the goddess, a revered spiritual site in the heart of the region.', address: 'Devi Chowk, East Godavari, Andhra Pradesh' },
     
     // Shopping (5)
-    { id: 36, category: 'shopping', title: 'Pithampur Market', alt: 'Pithampur Market', src: explorePithampurMarket, description: 'Vibrant local market offering traditional handicrafts, textiles, and authentic cuisine.', address: 'Pithampur Market, East Godavari, Andhra Pradesh' },
+    { id: 36, category: 'shopping', title: 'Pithapur Market', alt: 'Pithampur Market', src: explorePithampurMarket, description: 'Vibrant local market offering traditional handicrafts, textiles, and authentic cuisine.', address: 'Pithampur Market, East Godavari, Andhra Pradesh' },
     { id: 37, category: 'shopping', title: 'Kakinada Shopping', alt: 'Kakinada Shopping', src: exploreKakinadaShopping, description: 'Modern shopping destination with local boutiques, malls, and traditional markets.', address: 'Kakinada Shopping Complex, Kakinada, East Godavari' },
     { id: 38, category: 'shopping', title: 'Amalapuram Market', alt: 'Amalapuram Market', src: exploreAmalapuramMarket, description: 'Bustling market known for fresh produce, spices, and local artisan products.', address: 'Amalapuram Market, East Godavari, Andhra Pradesh' },
     { id: 39, category: 'shopping', title: 'Peddapuram Market', alt: 'Peddapuram Market', src: explorePeddapuramMarket, description: 'Traditional marketplace with authentic local products and cultural shopping experience.', address: 'Peddapuram Market, East Godavari, Andhra Pradesh' },
