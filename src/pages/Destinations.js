@@ -140,7 +140,6 @@ const Destinations = () => {
           <video
             ref={videoRef}
             height="100%" width="100%"
-            poster="/header.jpg"
             preload="metadata"
             playsInline
             muted

@@ -17,7 +17,6 @@ import brochure_amalapuram from "../assets/images/brochure-amalapuram-brochure.j
 import gallary_elephant_herd from "../assets/images/gallary-elephant-herd.jpg";
 import gallary_Kalaripayattu from "../assets/images/gallary-Kalaripayattu.jpg";
 import gallary_peddapuram_beach from "../assets/images/gallary-peddapuram-beach.jpg";
-import header_image from "../assets/images/header.jpg";
 import rajahmundry_image from "../assets/images/rajahmundry.jpg";
 import jack_fruit from "../assets/images/jack-fruit.jpg";
 import memories_village_life from "../assets/images/memories-village-life-experience.jpg";
@@ -469,7 +468,7 @@ export const events = [
 ];
 
 export const heroSlides = [
-  { heading: "East Godavari", description: "Experience the majestic East Godavari - the lifeline of East Godavari with its serene beauty and cultural significance.", video: "/godavari.mp4", poster: header_image }
+  { heading: "East Godavari", description: "Experience the majestic East Godavari - the lifeline of East Godavari with its serene beauty and cultural significance.", video: "/godavari.mp4" }
 ];
 
 export const whatsNew = [
@@ -581,6 +580,6 @@ export const footerSections = [
   ]}
 ];
 
-export { gallary_Kalaripayattu, gallary_peddapuram_beach, memories_cuisine, memories_village_life, memories_trekking, memories_agri_tourism, memories_artforms, memories_monsoon, memories_river_cruise, godavari_pushkaram, godavari_river, peddapuram, jack_fruit, header_image, rajahmundry_image, brochure_amalapuram, gallary_elephant_herd, responsible_farm, responsible_pottery, responsible_coconut, responsible_nursery, responsible_bamboo, responsible_dairy, eco_wildlife, eco_mangrove, eco_bird, eco_nature_trekking, eco_mountain_biking, eco_forest_camping, art_kuchipudi, art_folk_dance, art_music, art_theatre, art_puppetry, art_crafts, cuisine_seafood, cuisine_rice_dishes, cuisine_snacks, cuisine_sweets, cuisine_spices, cuisine_coconut };
+export { gallary_Kalaripayattu, gallary_peddapuram_beach, memories_cuisine, memories_village_life, memories_trekking, memories_agri_tourism, memories_artforms, memories_monsoon, memories_river_cruise, godavari_pushkaram, godavari_river, peddapuram, jack_fruit, rajahmundry_image, brochure_amalapuram, gallary_elephant_herd, responsible_farm, responsible_pottery, responsible_coconut, responsible_nursery, responsible_bamboo, responsible_dairy, eco_wildlife, eco_mangrove, eco_bird, eco_nature_trekking, eco_mountain_biking, eco_forest_camping, art_kuchipudi, art_folk_dance, art_music, art_theatre, art_puppetry, art_crafts, cuisine_seafood, cuisine_rice_dishes, cuisine_snacks, cuisine_sweets, cuisine_spices, cuisine_coconut };
 
 

@@ -73,7 +73,6 @@ const Spirituality = () => {
             muted
             loop
             playsInline
-            poster="/header.jpg"
             preload="metadata"
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           >
