@@ -227,10 +227,10 @@ const ExperienceDetail = () => {
   const siblingExperiences = categoryData.items.filter((_, idx) => idx !== currentIndex);
 
   return (
-    <div className="page-container" style={{ paddingTop: '0', minHeight: '100vh' }}>
-      {/* Hero Section */}
-      <div style={{ position: 'relative', width: '100%', height: '600px', overflow: 'hidden' }}>
-        <img src={experience.image} alt={details.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <div style={{ minHeight: '100vh' }}>
+      {/* Hero Section - Full screen */}
+      <div className="destination-detail-hero">
+        <img src={experience.image} alt={details.title} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%)' }}></div>
 
         <div style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', zIndex: 5 }}>

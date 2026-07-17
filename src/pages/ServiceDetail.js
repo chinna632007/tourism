@@ -18,8 +18,8 @@ const ServiceDetail = () => {
   return (
     <div className="page-container" style={{paddingTop:'0',minHeight:'100vh'}}>
       {/* Hero Section */}
-      <div style={{position:'relative',width:'100%',height:'600px',overflow:'hidden'}}>
-        <img 
+      <div className="destination-detail-hero">
+        <img
           src={service.image}
           alt={service.title} 
           style={{width:'100%',height:'100%',objectFit:'cover'}}
