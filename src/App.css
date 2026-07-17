@@ -2362,6 +2362,11 @@
         height: 100vh;
         margin-top: -150px;
       }
+
+      /* Destination detail page - remove white gap above hero */
+      main:not(.home-page) .destination-detail-hero {
+        margin-top: -150px;
+      }
       
       @media (max-width: 767px) {
         main:not(.home-page) {
@@ -2372,6 +2377,21 @@
         main:not(.home-page) .spirituality-hero {
           margin-top: -110px;
         }
+      }
+
+      /* Destination Detail Hero */
+      .destination-detail-hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .destination-detail-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
      @media (max-width: 767px) {

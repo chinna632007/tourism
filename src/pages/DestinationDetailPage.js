@@ -62,14 +62,14 @@ const destinationDetails = {
   7: { title: 'Ramanayuni Temple', description: 'Ancient temple with historical significance', fullDescription: ['Ramanayuni Temple is dedicated to Lord Rama and showcases beautiful architecture.'], location: 'Kadiyam, East Godavari', category: 'heritage', image: exploreRamanayuniTemple },
   8: { title: 'Peddapuram Fort', description: 'Historic fort in Peddapuram', fullDescription: ['Peddapuram Fort stands as a testament to the region\'s rich history.'], location: 'Peddapuram, East Godavari', category: 'heritage', image: explorePeddapuramFort },
   9: { title: 'Rajahmundry Bridge', description: 'Iconic bridge over Godavari River', fullDescription: ['The Rajahmundry Bridge is an architectural marvel spanning the Godavari River.'], location: 'Rajahmundry, East Godavari', category: 'heritage', image: exploreRajahmundryBridge },
-  10: { title: 'Kotipalli Temple', description: 'Sacred temple on the river island', fullDescription: ['Kotipalli Temple is located on a beautiful river island and attracts devotees.'], location: 'Nuzvid, East Godavari', category: 'heritage', image: exploreKotipalliTemple },
+  10: { title: 'Mahakalehwar temple', description: 'Sacred temple on the river island', fullDescription: ['mahakaleshwar Temple is located on a beautiful river island and attracts devotees.'], location: 'Nuzvid, East Godavari', category: 'heritage', image: exploreKotipalliTemple },
   11: { title: 'Kotipalli River', description: 'Scenic river island experience', fullDescription: ['Kotipalli River offers beautiful river island experiences with boating and nature.'], location: 'Nuzvid, East Godavari', category: 'river islands', image: exploreKotipalliRiver },
   12: { title: 'Hope Island', description: 'Picturesque island in the river', fullDescription: ['Hope Island is a serene destination perfect for nature lovers and bird watchers.'], location: 'Rajahmundry, East Godavari', category: 'river islands', image: exploreHopeIsland },
   13: { title: 'Pallam Island', description: 'Tranquil river island', fullDescription: ['Pallam Island offers peaceful surroundings and beautiful river views.'], location: 'Rajahmundry, East Godavari', category: 'river islands', image: explorePallamIsland },
    14: { title: 'Godavari Island', description: 'Island in the mighty Godavari', fullDescription: ['Godavari Island is formed by the river and offers unique experiences.'], location: 'Rajahmundry, East Godavari', category: 'river islands', image: '/godavari-cards.webp' },
   15: { title: 'Yalamanchili Lanka', description: 'Island destination with scenic beauty', fullDescription: ['Yalamanchili Lanka is known for its natural beauty and peaceful environment.'], location: 'Rajahmundry, East Godavari', category: 'river islands', image: exploreYalamanchiliLanka },
   16: { title: 'Gudisa Hill', description: 'Hill station with panoramic views', fullDescription: ['Gudisa Hill offers breathtaking views of the surrounding landscape.'], location: 'Rajahmundry, East Godavari', category: 'hills', image: exploreGudisaHill },
-  17: { title: 'Pithampur Hills', description: 'Scenic hills with lush greenery', fullDescription: ['Pithampur Hills are covered with dense forests and offer trekking opportunities.'], location: 'Amalapuram, East Godavari', category: 'hills', image: explorePithampurHills },
+  17: { title: 'Pithapur Hills', description: 'Scenic hills with lush greenery', fullDescription: ['Pithapur Hills are covered with dense forests and offer trekking opportunities.'], location: 'Amalapuram, East Godavari', category: 'hills', image: explorePithampurHills },
   18: { title: 'Maridimilli Hill', description: 'Beautiful hill destination', fullDescription: ['Maridimilli Hill is known for its natural beauty and peaceful atmosphere.'], location: 'Rajahmundry, East Godavari', category: 'hills', image: exploreMaridimilliHill },
   19: { title: 'Kakinada Hill View', description: 'Hill viewpoint in Kakinada', fullDescription: ['Kakinada Hill View offers panoramic views of the city and surrounding areas.'], location: 'Kakinada, East Godavari', category: 'hills', image: exploreKakinadaHillView },
   20: { title: 'Papi Hills', description: 'Cluster of scenic river islands', fullDescription: ['Papi Hills is a cluster of beautiful river islands on the Godavari River.'], location: 'Rajahmundry, East Godavari', category: 'hills', image: explorePapiHill },
@@ -113,10 +113,10 @@ const DestinationDetailPage = () => {
   const coords = locationCoords[dest.location] || { lat: 17.0, lng: 81.8 };
 
   return (
-    <div className="page-container" style={{ paddingTop: '0', minHeight: '100vh' }}>
-      {/* Hero Section */}
-      <div style={{ position: 'relative', width: '100%', height: '600px', overflow: 'hidden' }}>
-        <img src={dest.image} alt={dest.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <div style={{ minHeight: '100vh' }}>
+      {/* Hero Section - Full screen */}
+      <div className="destination-detail-hero">
+        <img src={dest.image} alt={dest.title} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%)' }}></div>
 
         <div style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', zIndex: 5 }}>
