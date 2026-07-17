@@ -146,179 +146,239 @@
       }
 
 
-      .header-top .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        min-height: 90px;
-      }
+       .header-top .header-container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         padding-top: 0.75rem;
+         padding-bottom: 0.75rem;
+         min-height: 90px;
+       }
 
-      @media (min-width: 48em) {
-        .header-top .header-container {
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          min-height: 110px;
-        }
-      }
+       @media (min-width: 48em) {
+         .header-top .header-container {
+           padding-top: 1rem;
+           padding-bottom: 1rem;
+           min-height: 110px;
+         }
+       }
 
-      /* Left: Emblem + Title */
-      .header-top-left {
-        display: none;
-        align-items: center;
-        gap: 0.75rem;
-      }
+       @media (min-width: 64em) {
+         .header-top .header-container {
+           justify-content: center;
+         }
+       }
 
-      @media (min-width: 48em) {
-        .header-top-left {
-          display: flex;
-        }
-      }
+       /* Center: CM Photo + AP Logo + Title */
+       .header-top-center {
+         display: none;
+         align-items: center;
+         justify-content: center;
+       }
 
-      .header-emblem {
-        height: 50px;
-        width: auto;
-        object-fit: contain;
-      }
+       @media (min-width: 64em) {
+         .header-top-center {
+           display: flex;
+         }
+       }
 
-      @media (min-width: 62em) {
-        .header-emblem {
-          height: 60px;
-        }
-      }
+       .header-center-content {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         gap: 1rem;
+       }
 
-      .header-title-block {
-        display: flex;
-        flex-direction: column;
-      }
+       .header-cm {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.25rem;
+       }
 
-      .header-title {
-        font-size: 0.95rem;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #fff;
-        transition: color 0.3s ease;
-      }
+       .header-title-block {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+       }
 
-      .header.header-scrolled .header-title {
-        color: #ffffff;
-      }
+       /* Left: CM Photo */
+       .header-top-left {
+         display: none;
+         position: absolute;
+         left: 0.25rem;
+         top: 50%;
+         transform: translateY(-50%);
+         align-items: flex-start;
+         gap: 0.75rem;
+       }
 
-      @media (min-width: 62em) {
-        .header-title {
-          font-size: 1.1rem;
-        }
-      }
+       @media (min-width: 48em) {
+         .header-top-left {
+           display: flex;
+           left: 25rem;
+         }
+       }
 
-      .header-subtitle {
-        font-size: 0.65rem;
-        font-weight: 600;
-        line-height: 1.2;
-        color: rgba(255, 255, 255, 0.7);
-        transition: color 0.3s ease;
-      }
+       .header-cm-img {
+         width: 52px;
+         height: 52px;
+         object-fit: cover;
+         border-radius: 50%;
+         border: 2px solid rgba(255, 255, 255, 0.6);
+         background: rgba(255, 255, 255, 0.1);
+       }
 
-      .header.header-scrolled .header-subtitle {
-        color: rgba(255, 255, 255, 0.75);
-      }
+       .header-cm-text {
+         font-size: 0.65rem;
+         font-weight: 700;
+         letter-spacing: 0.08em;
+         text-transform: uppercase;
+         color: rgba(255, 255, 255, 0.9);
+         white-space: nowrap;
+       }
 
-      @media (min-width: 62em) {
-        .header-subtitle {
-          font-size: 0.72rem;
-        }
-      }
+       .header-cm-subtitle {
+         font-size: 0.55rem;
+         font-weight: 600;
+         letter-spacing: 0.04em;
+         text-transform: uppercase;
+         color: rgba(255, 255, 255, 0.8);
+         white-space: nowrap;
+       }
 
-      /* Right: Buttons */
-      /* Center: CM Photo + Name */
-      .header-top-center {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+       /* Minister section */
+       .header-minister {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.45rem;
+         margin-left: 20rem;
+       }
 
-      @media (min-width: 64em) {
-        .header-top-center {
-          display: flex;
-        }
-      }
+       .header-minister-img {
+         width: 52px;
+         height: 52px;
+         object-fit: cover;
+         border-radius: 50%;
+         border: 2px solid rgba(255, 255, 255, 0.6);
+         background: rgba(255, 255, 255, 0.1);
+       }
 
-      .header-cm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.25rem;
-      }
+       .header-minister-name {
+         font-size: 0.65rem;
+         font-weight: 700;
+         letter-spacing: 0.04em;
+         color: rgba(255, 255, 255, 0.9);
+         white-space: nowrap;
+       }
 
-      .header-cm-img {
-        width: 52px;
-        height: 52px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        background: rgba(255, 255, 255, 0.1);
-      }
+       .header-minister-title {
+         font-size: 0.55rem;
+         font-weight: 600;
+         letter-spacing: 0.04em;
+         text-transform: uppercase;
+         color: rgba(255, 255, 255, 0.8);
+         white-space: nowrap;
+       }
 
-      .header-cm-text {
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.9);
-        white-space: nowrap;
-      }
+       .header.header-scrolled .header-cm-img {
+         border-color: rgba(0, 0, 0, 0.15);
+         background: rgba(0, 0, 0, 0.04);
+       }
 
-      .header.header-scrolled .header-cm-img {
-        border-color: rgba(0, 0, 0, 0.15);
-        background: rgba(0, 0, 0, 0.04);
-      }
+       .header.header-scrolled .header-cm-text {
+         color: rgba(255, 255, 255, 0.9);
+       }
 
-      .header.header-scrolled .header-cm-text {
-        color: rgba(255, 255, 255, 0.9);
-      }
+       .header-emblem {
+         height: 50px;
+         width: auto;
+         object-fit: contain;
+       }
 
-      .header-top-right {
-        display: none;
-        align-items: center;
-        gap: 0.75rem;
-      }
+       @media (min-width: 62em) {
+         .header-emblem {
+           height: 60px;
+         }
+       }
 
-      @media (min-width: 48em) {
-        .header-top-right {
-          display: flex;
-        }
-      }
+       .header-title {
+         font-size: 0.95rem;
+         font-weight: 700;
+         line-height: 1.2;
+         color: #fff;
+         transition: color 0.3s ease;
+       }
 
-      .header-btn {
-        padding: 0.45rem 1rem;
-        font-size: 0.78rem;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-        border: 2px solid transparent;
-      }
+       .header.header-scrolled .header-title {
+         color: #ffffff;
+       }
 
-      @media (min-width: 62em) {
-        .header-emblem {
-          height: 60px;
-        }
-        .header-cm-img {
-          width: 60px;
-          height: 60px;
-        }
-      }
-      
+       @media (min-width: 62em) {
+         .header-title {
+           font-size: 1.1rem;
+         }
+       }
 
-      @media (min-width: 62em) {
-        .header-cm-img {
-          width: 60px;
-          height: 60px;
-        }
-      }
+       .header-subtitle {
+         font-size: 0.65rem;
+         font-weight: 600;
+         line-height: 1.2;
+         color: rgba(255, 255, 255, 0.7);
+         transition: color 0.3s ease;
+       }
+
+       .header.header-scrolled .header-subtitle {
+         color: rgba(255, 255, 255, 0.75);
+       }
+
+       @media (min-width: 62em) {
+         .header-subtitle {
+           font-size: 0.72rem;
+         }
+       }
+
+       @media (min-width: 62em) {
+         .header-cm-img {
+           width: 60px;
+           height: 60px;
+         }
+       }
+
+       /* Right: Buttons */
+       .header-top-right {
+         display: none;
+         align-items: center;
+         gap: 0.75rem;
+         position: absolute;
+         right: 1rem;
+       }
+
+       @media (min-width: 48em) {
+         .header-top-right {
+           display: flex;
+           right: 2rem;
+         }
+       }
+
+       @media (min-width: 64em) {
+         .header-top-right {
+           right: 2rem;
+         }
+       }
+
+       .header-btn {
+         padding: 0.45rem 1rem;
+         font-size: 0.78rem;
+         font-weight: 700;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         white-space: nowrap;
+         border: 2px solid transparent;
+       }
 
       .header-btn {
         border-radius: 9999px;

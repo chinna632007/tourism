@@ -62,17 +62,23 @@ const Header = () => {
       <div className="header-top">
         <div className="header-container">
           <div className="header-top-left">
-            <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
-            <div className="header-title-block">
-              <h1 className="header-title">East Godavari Tourism</h1>
-              <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
+            <div className="header-cm">
+              <img src="/cm.jpg" alt="CM N. Chandrababu Naidu" className="header-cm-img" />
+              <span className="header-cm-text">Sri N. Chandrababu Naidu</span>
+              <span className="header-cm-subtitle">Chief Minister of Andhra Pradesh</span>
+            </div>
+            <div className="header-minister">
+              <img src="/minister.jpg" alt="Minister" className="header-minister-img" />
+              <span className="header-minister-name">Durgesh Kandhula</span>
+              <span className="header-minister-title">Ministry of East Godavari</span>
             </div>
           </div>
 
           <div className="header-top-center">
-            <div className="header-cm">
-              <img src="/cm.jpg" alt="CM N. Chandrababu Naidu" className="header-cm-img" />
-              <span className="header-cm-text">Sri N. Chandrababu Naidu</span>
+            <div className="header-title-block">
+              <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
+              <h1 className="header-title">East Godavari Tourism</h1>
+              <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
             </div>
           </div>
 
