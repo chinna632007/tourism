@@ -910,13 +910,73 @@ const PhotoGallery = () => (
 );
 
 const VideoGallery = () => (
-  <section className="section">
-    <div className="container">
-      <div className="container-xl" style={{ margin: '0 auto' }}>
+  <section className="section" style={{ padding: '0' }}>
+    <div style={{ width: '100%', padding: '0 1rem' }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto', marginBottom: '2rem' }}>
         <SectionHeader heading="Video Gallery" description="Take a virtual expedition through our video gallery" />
       </div>
-      <div className="video-gallery-wrapper">
-        <iframe src="https://youtu.be/M5TPr506adk?si=WZF8Bc7LsdHyw6dN" title="East Godavari Tourism Video" allowFullScreen></iframe>
+      <div style={{
+        width: '100%',
+        borderRadius: '16px',
+        overflow: 'hidden',
+        background: '#ffffff',
+        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)',
+        transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
+        cursor: 'pointer',
+        border: '1px solid rgba(0, 0, 0, 0.04)',
+        position: 'relative'
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.transform = 'translateY(-8px) scale(1.01)';
+        e.currentTarget.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06)';
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.transform = 'translateY(0) scale(1)';
+        e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04)';
+      }}
+      >
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '21 / 9',
+          overflow: 'hidden',
+          background: '#000',
+          borderRadius: '16px 16px 0 0'
+        }}>
+          <iframe
+            src="https://www.youtube.com/embed/mGWv6dpM7Xc"
+            title="East Godavari Tourism Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          ></iframe>
+        </div>
+        <div style={{
+          padding: '2rem',
+          background: '#ffffff'
+        }}>
+          <h4 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: '1.5rem',
+            fontWeight: '700',
+            color: '#1a1a2e',
+            marginBottom: '0.75rem',
+            lineHeight: '1.3'
+          }}>East Godavari Tourism Video</h4>
+          <p style={{
+            fontSize: '1rem',
+            color: '#6b7280',
+            lineHeight: '1.7',
+            margin: 0
+          }}>Explore the beauty of East Godavari through this stunning visual tour. Discover ancient temples, pristine beaches, lush landscapes, and vibrant culture that make this region a must-visit destination.</p>
+        </div>
       </div>
     </div>
   </section>

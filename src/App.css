@@ -2368,12 +2368,18 @@
      }
 
      /* ===== VIDEO GALLERY ===== */
-     .video-gallery-wrapper iframe {
-       width: 100%;
-       height: 500px;
-       border: none;
-       border-radius: 0.5rem;
-     }
+      .video-gallery-wrapper {
+        display: block;
+      }
+
+      .video-gallery-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
      /* ===== QUICK INFO CARDS ===== */
      .quick-info-grid {
