@@ -668,7 +668,7 @@ const Spirituality = () => {
     { title: "Mahakaleshwar Temple", image: exploreMahakaleshwarTemple, description: "Ancient temple by the river banks", link: "/destination-page/31" },
     { title: "Ramanayuni Temple", image: exploreRamanayuniTemple, description: "Sacred shrine with rich heritage", link: "/destination-page/32" },
     { title: "Korukonda Temple", image: exploreKorukondaTemple, description: "Hilltop temple with panoramic views", link: "/destination-page/33" },
-    { title: "Kakinada Ramalayam", image: exploreKakindaRamalayam, description: "Divine temple dedicated to Lord Rama", link: "/destination-page/34" },
+    { title: "Mamidada Ramalayam", image: exploreKakindaRamalayam, description: "Divine temple dedicated to Lord Rama", link: "/destination-page/34" },
     { title: "Vinayaka Temple", image: exploreVinayakaTemple, description: "Temple dedicated to Lord Ganesha", link: "/destination-page/35" }
   ];
 
