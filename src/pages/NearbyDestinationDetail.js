@@ -40,13 +40,12 @@ const NearbyDestinationDetail = () => {
   };
 
   return (
-    <div className="page-container" style={{ paddingTop: '0', minHeight: '100vh' }}>
-      {/* Hero Section */}
-      <div style={{ position: 'relative', width: '100%', height: '600px', overflow: 'hidden' }}>
+    <div style={{ minHeight: '100vh' }}>
+      {/* Hero Section - Full screen */}
+      <div className="destination-detail-hero">
         <img
           src={dest.image}
           alt={dest.heading}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
           position: 'absolute',

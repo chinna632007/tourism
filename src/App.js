@@ -62,23 +62,39 @@ const Header = () => {
       <div className="header-top">
         <div className="header-container">
           <div className="header-top-left">
-            <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
+            <div className="header-cm">
+              <img src="/cm.jpg" alt="CM N. Chandrababu Naidu" className="header-cm-img" />
+              <span className="header-cm-text">Sri N. Chandrababu Naidu</span>
+              <span className="header-cm-subtitle">Chief Minister of Andhra Pradesh</span>
+            </div>
+            <div className="header-minister">
+              <img src="/minister.jpg" alt="Minister" className="header-minister-img" />
+              <span className="header-minister-name">Sri Durgesh Kandhula</span>
+              <span className="header-minister-title">Ministry of East Godavari</span>
+            </div>
+          </div>
+
+          <div className="header-top-center">
             <div className="header-title-block">
+              <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
               <h1 className="header-title">East Godavari Tourism</h1>
               <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
             </div>
           </div>
 
-          <div className="header-top-center">
-            <div className="header-cm">
-              <img src="/cm.jpg" alt="CM N. Chandrababu Naidu" className="header-cm-img" />
-              <span className="header-cm-text">Sri N. Chandrababu Naidu</span>
-            </div>
-          </div>
-
           <div className="header-top-right">
-            <Link to="/plan-trip" className="header-btn header-btn-primary">Plan Your Trip</Link>
-            <Link to="/contact" className="header-btn header-btn-primary">Contact Us</Link>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="header-social-btn" title="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="header-social-btn" title="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="header-social-btn" title="Twitter">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="mailto:info@eastgodavaritourism.com" target="_blank" rel="noopener noreferrer" className="header-social-btn" title="Email">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
           </div>
 
           <button
@@ -122,7 +138,11 @@ const Footer = () => (
     <div className="container">
       <div style={{ 
         textAlign: 'center', 
+<<<<<<< HEAD
         padding: '1.5rem 1.5rem',
+=======
+        padding: '1.5rem 2rem',
+>>>>>>> f730bbdf2a6998b2996ca1b3cd23fd37d48f025e
         background: 'rgba(122, 31, 31, 0)',
         borderRadius: '0.5rem',
         backdropFilter: 'blur(10px)',
@@ -131,8 +151,8 @@ const Footer = () => (
       }}>
         <h3 style={{ 
           color: '#fff', 
-          fontSize: '2.5rem', 
-          marginBottom: '1rem',
+          fontSize: '2rem', 
+          marginBottom: '0.5rem',
           fontFamily: "'Playfair Display', Georgia, serif",
           textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
           fontWeight: '600',
@@ -142,8 +162,8 @@ const Footer = () => (
         </h3>
         <p style={{ 
           color: '#f0f0f0', 
-          fontSize: '1.15rem',
-          marginBottom: '2rem',
+          fontSize: '1rem',
+          marginBottom: '1rem',
           textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
           lineHeight: '1.6'
         }}>
@@ -153,36 +173,40 @@ const Footer = () => (
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
+<<<<<<< HEAD
           gap: '3rem', 
+=======
+          gap: '2rem', 
+>>>>>>> f730bbdf2a6998b2996ca1b3cd23fd37d48f025e
           marginBottom: '1.5rem',
           flexWrap: 'wrap'
         }}>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>50+</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Destinations</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>50+</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Destinations</div>
           </div>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>100+</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Experiences</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>100+</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Experiences</div>
           </div>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>24/7</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Support</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>24/7</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Support</div>
           </div>
         </div>
         
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link 
             to="/plan-trip" 
             style={{ 
               display: 'inline-flex',
-              padding: '0.875rem 2.5rem',
+              padding: '0.625rem 1.75rem',
               background: 'linear-gradient(135deg, #ff9d00 0%, #ffb347 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: '50px',
               fontWeight: '600',
-              fontSize: '1.1rem',
+              fontSize: '0.95rem',
               boxShadow: '0 4px 15px rgba(255, 157, 0, 0.4)',
               transition: 'all 0.3s ease',
               alignItems: 'center',
@@ -190,7 +214,7 @@ const Footer = () => (
             }}
           >
             Plan Your Trip
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
@@ -198,13 +222,13 @@ const Footer = () => (
             to="/contact" 
             style={{ 
               display: 'inline-flex',
-              padding: '0.875rem 2.5rem',
+              padding: '0.625rem 1.75rem',
               background: 'linear-gradient(135deg, #ff9d00 0%, #ffb347 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: '50px',
               fontWeight: '600',
-              fontSize: '1.1rem',
+              fontSize: '0.95rem',
               boxShadow: '0 4px 15px rgba(255, 157, 0, 0.4)',
               transition: 'all 0.3s ease',
               alignItems: 'center',

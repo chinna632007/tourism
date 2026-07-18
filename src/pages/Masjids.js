@@ -49,13 +49,13 @@ const Masjids = () => {
               Tranquil <span className="hero-highlight" style={{ background: 'linear-gradient(135deg, #2E8B57, #66BB6A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Abodes of Prayer</span>
             </h1>
             <div className="spirituality-quote fade-in">
-              <div className="quote-mark quote-mark-top" style={{ color: '#2E8B57', opacity: 0.3 }}>"</div>
+              <div className="quote-mark quote-mark-top" style={{ color: '#ca5a0a', opacity: 0.3 }}>"</div>
               <p className="quote-text">
                 Experience the peaceful ambiance of East Godavari\'s mosques, where Islamic architecture and spiritual devotion create an atmosphere of serenity and reflection.
               </p>
-              <div className="quote-mark quote-mark-bottom" style={{ color: '#2E8B57', opacity: 0.3 }}>"</div>
+              <div className="quote-mark quote-mark-bottom" style={{ color: '#ca5a0a', opacity: 0.3 }}>"</div>
             </div>
-            <Link to="/spirituality" className="spirituality-back-link fade-in" style={{ color: '#2E8B57' }}>
+            <Link to="/spirituality" className="spirituality-back-link fade-in" style={{ color: '#ca5a0a' }}>
               ← Back to Spirituality
             </Link>
           </div>
@@ -86,7 +86,7 @@ const Masjids = () => {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-                <div className="spirituality-card-explore-btn" style={{ background: 'linear-gradient(135deg, #2E8B57, #66BB6A)' }}>
+                <div className="spirituality-card-explore-btn">
                   <span>Explore</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />

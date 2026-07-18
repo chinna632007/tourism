@@ -6,14 +6,17 @@ import exploreRamanayuniTemple from '../assets/images/explore-ramanayuni-temple.
 import exploreKorukondaTemple from '../assets/images/explore-korukonda-temple.jpg';
 import exploreKakindaRamalayam from '../assets/images/explore-kakinda-ramalayam.jpg';
 import exploreVinayakaTemple from '../assets/images/explore-vinayaka-temple.jpg';
+import exploreDeviChowk from '../assets/images/spirituality-devichowk.webp';
+
 import './Spirituality.css';
 
 const templeItems = [
-  { title: 'Kotipalli Temple', image: exploreKotipalliTemple, description: 'Ancient temple by the river banks, offering a serene spiritual experience.', link: '/destination-page/31' },
+  { title: 'Mahakaleshwar Temple', image: exploreKotipalliTemple, description: 'Ancient temple by the river banks, offering a serene spiritual experience.', link: '/destination-page/31' },
   { title: 'Ramanayuni Temple', image: exploreRamanayuniTemple, description: 'Sacred shrine with rich heritage and divine architecture.', link: '/destination-page/32' },
   { title: 'Korukonda Temple', image: exploreKorukondaTemple, description: 'Hilltop temple with panoramic views and spiritual ambiance.', link: '/destination-page/33' },
-  { title: 'Kakinada Ramalayam', image: exploreKakindaRamalayam, description: 'Divine temple dedicated to Lord Rama, a beacon of faith.', link: '/destination-page/34' },
-  { title: 'Vinayaka Temple', image: exploreVinayakaTemple, description: 'Temple dedicated to Lord Ganesha, the remover of obstacles.', link: '/destination-page/35' }
+  { title: 'Mamidada Ramalayam', image: exploreKakindaRamalayam, description: 'Divine temple dedicated to Lord Rama, a beacon of faith.', link: '/destination-page/34' },
+  { title: 'Vinayaka Temple', image: exploreVinayakaTemple, description: 'Temple dedicated to Lord Ganesha, the remover of obstacles.', link: '/destination-page/35' },
+  { title: 'Devi Chowk Mandir', image: exploreDeviChowk, description: 'Sacred temple dedicated to the goddess', link: '/destination-page/42' }
 ];
 
 const Temples = () => {
@@ -93,7 +96,7 @@ const Temples = () => {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-                <div className="spirituality-card-explore-btn" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFB347)' }}>
+                <div className="spirituality-card-explore-btn">
                   <span>Explore</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
