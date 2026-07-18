@@ -51,7 +51,7 @@ const Churches = () => {
             <div className="spirituality-quote fade-in">
               <div className="quote-mark quote-mark-top" style={{ color: '#4A90D9', opacity: 0.3 }}>"</div>
               <p className="quote-text">
-                Discover the beautiful churches of East Godavari, where stunning architecture and peaceful sanctuaries offer solace to the soul. A testament to the region's rich Christian heritage.
+                Discover the beautifull churches of East Godavari, where stunning architecture and peaceful sanctuaries offer solace to the soul. A testament to the region's rich Christian heritage.
               </p>
               <div className="quote-mark quote-mark-bottom" style={{ color: '#4A90D9', opacity: 0.3 }}>"</div>
             </div>
