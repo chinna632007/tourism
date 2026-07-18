@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { heroSlides, events, photoGallery, destinations, gallary_Kalaripayattu, gallary_peddapuram_beach, memories_cuisine, memories_village_life, memories_trekking, memories_agri_tourism, memories_artforms, memories_monsoon, memories_river_cruise, godavari_pushkaram, godavari_river, peddapuram, jack_fruit } from '../data/content';
-import exploreKotipalliTemple from '../assets/images/explore-kotipalli-temple.jpg';
+import exploreMahakaleshwarTemple from '../assets/images/explore-kotipalli-temple.jpg';
 import exploreRamanayuniTemple from '../assets/images/explore-ramanayuni-temple.jpg';
 import exploreKorukondaTemple from '../assets/images/explore-korukonda-temple.jpg';
 import exploreKakindaRamalayam from '../assets/images/explore-kakinda-ramalayam.jpg';
@@ -665,7 +665,7 @@ const PopularDestinations = () => {
 
 const Spirituality = () => {
   const spiritualityItems = [
-    { title: "Kotipalli Temple", image: exploreKotipalliTemple, description: "Ancient temple by the river banks", link: "/destination-page/31" },
+    { title: "Mahakaleshwar Temple", image: exploreMahakaleshwarTemple, description: "Ancient temple by the river banks", link: "/destination-page/31" },
     { title: "Ramanayuni Temple", image: exploreRamanayuniTemple, description: "Sacred shrine with rich heritage", link: "/destination-page/32" },
     { title: "Korukonda Temple", image: exploreKorukondaTemple, description: "Hilltop temple with panoramic views", link: "/destination-page/33" },
     { title: "Kakinada Ramalayam", image: exploreKakindaRamalayam, description: "Divine temple dedicated to Lord Rama", link: "/destination-page/34" },
