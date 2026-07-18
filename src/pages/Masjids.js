@@ -37,30 +37,7 @@ const Masjids = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="spirituality-hero masjids-hero">
-        <div className="spirituality-hero-bg"></div>
-        <div className="spirituality-hero-overlay"></div>
-        <div className="container">
-          <div className="spirituality-hero-content">
-            <div className="spirituality-hero-badge fade-in">
-              <span>🕌</span> Masjids
-            </div>
-            <h1 className="fade-in">
-              Tranquil <span className="hero-highlight" style={{ background: 'linear-gradient(135deg, #2E8B57, #66BB6A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Abodes of Prayer</span>
-            </h1>
-            <div className="spirituality-quote fade-in">
-              <div className="quote-mark quote-mark-top" style={{ color: '#ca5a0a', opacity: 0.3 }}>"</div>
-              <p className="quote-text">
-                Experience the peaceful ambiance of East Godavari\'s mosques, where Islamic architecture and spiritual devotion create an atmosphere of serenity and reflection.
-              </p>
-              <div className="quote-mark quote-mark-bottom" style={{ color: '#ca5a0a', opacity: 0.3 }}>"</div>
-            </div>
-            <Link to="/spirituality" className="spirituality-back-link fade-in" style={{ color: '#ca5a0a' }}>
-              ← Back to Spirituality
-            </Link>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Cards Section */}
       <section className="spirituality-items-section" style={{ background: '#F0FFF4' }}>

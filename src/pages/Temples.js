@@ -47,30 +47,7 @@ const Temples = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="spirituality-hero temples-hero">
-        <div className="spirituality-hero-bg"></div>
-        <div className="spirituality-hero-overlay"></div>
-        <div className="container">
-          <div className="spirituality-hero-content">
-            <div className="spirituality-hero-badge fade-in">
-              <span>🛕</span> Temples
-            </div>
-            <h1 className="fade-in">
-              Sacred <span className="hero-highlight" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFB347)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Temples</span>
-            </h1>
-            <div className="spirituality-quote fade-in">
-              <div className="quote-mark quote-mark-top" style={{ color: '#FF6B35', opacity: 0.3 }}>"</div>
-              <p className="quote-text">
-                Explore the ancient temples of East Godavari, where centuries-old architecture meets spiritual serenity. From riverside shrines to hilltop sanctums, each temple tells a story of faith and devotion.
-              </p>
-              <div className="quote-mark quote-mark-bottom" style={{ color: '#FF6B35', opacity: 0.3 }}>"</div>
-            </div>
-            <Link to="/spirituality" className="spirituality-back-link fade-in" style={{ color: '#FF6B35' }}>
-              ← Back to Spirituality
-            </Link>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Cards Section - Matching Experiences Page Style */}
       <section className="spirituality-items-section" style={{ background: '#FFF5EB' }}>
