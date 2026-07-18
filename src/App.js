@@ -138,11 +138,7 @@ const Footer = () => (
     <div className="container">
       <div style={{ 
         textAlign: 'center', 
-<<<<<<< HEAD
-        padding: '1.5rem 1.5rem',
-=======
         padding: '1.5rem 2rem',
->>>>>>> f730bbdf2a6998b2996ca1b3cd23fd37d48f025e
         background: 'rgba(122, 31, 31, 0)',
         borderRadius: '0.5rem',
         backdropFilter: 'blur(10px)',
@@ -173,11 +169,7 @@ const Footer = () => (
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
-<<<<<<< HEAD
-          gap: '3rem', 
-=======
-          gap: '2rem', 
->>>>>>> f730bbdf2a6998b2996ca1b3cd23fd37d48f025e
+          gap: '2rem',
           marginBottom: '1.5rem',
           flexWrap: 'wrap'
         }}>
