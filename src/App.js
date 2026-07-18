@@ -134,21 +134,21 @@ const Header = () => {
 
 // ============ FOOTER ============
 const Footer = () => (
-  <footer className="footer" style={{ background: 'linear-gradient(135deg, #090909 0%, #4e1e1e 100%)', padding: '4rem 0 2rem' }}>
+  <footer className="footer" style={{ background: 'linear-gradient(135deg, #090909 0%, #4e1e1e 100%)', padding: '2rem 0 1rem' }}>
     <div className="container">
       <div style={{ 
         textAlign: 'center', 
-        padding: '2.5rem 2rem',
+        padding: '1.5rem 2rem',
         background: 'rgba(122, 31, 31, 0)',
         borderRadius: '0.5rem',
         backdropFilter: 'blur(10px)',
         maxWidth: '1000px',
-        margin: '0 auto 2rem'
+        margin: '0 auto 1rem'
       }}>
         <h3 style={{ 
           color: '#fff', 
-          fontSize: '2.5rem', 
-          marginBottom: '1rem',
+          fontSize: '2rem', 
+          marginBottom: '0.5rem',
           fontFamily: "'Playfair Display', Georgia, serif",
           textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
           fontWeight: '600',
@@ -158,8 +158,8 @@ const Footer = () => (
         </h3>
         <p style={{ 
           color: '#f0f0f0', 
-          fontSize: '1.15rem',
-          marginBottom: '2rem',
+          fontSize: '1rem',
+          marginBottom: '1rem',
           textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
           lineHeight: '1.6'
         }}>
@@ -169,36 +169,36 @@ const Footer = () => (
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
-          gap: '3rem', 
-          marginBottom: '2.5rem',
+          gap: '2rem', 
+          marginBottom: '1.5rem',
           flexWrap: 'wrap'
         }}>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>50+</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Destinations</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>50+</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Destinations</div>
           </div>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>100+</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Experiences</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>100+</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Experiences</div>
           </div>
           <div>
-            <div style={{ color: '#ff9d00', fontSize: '2.5rem', fontWeight: '700', marginBottom: '0.5rem' }}>24/7</div>
-            <div style={{ color: '#fff', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Support</div>
+            <div style={{ color: '#ff9d00', fontSize: '1.75rem', fontWeight: '700', marginBottom: '0.25rem' }}>24/7</div>
+            <div style={{ color: '#fff', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Support</div>
           </div>
         </div>
         
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link 
             to="/plan-trip" 
             style={{ 
               display: 'inline-flex',
-              padding: '0.875rem 2.5rem',
+              padding: '0.625rem 1.75rem',
               background: 'linear-gradient(135deg, #ff9d00 0%, #ffb347 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: '50px',
               fontWeight: '600',
-              fontSize: '1.1rem',
+              fontSize: '0.95rem',
               boxShadow: '0 4px 15px rgba(255, 157, 0, 0.4)',
               transition: 'all 0.3s ease',
               alignItems: 'center',
@@ -206,7 +206,7 @@ const Footer = () => (
             }}
           >
             Plan Your Trip
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
@@ -214,13 +214,13 @@ const Footer = () => (
             to="/contact" 
             style={{ 
               display: 'inline-flex',
-              padding: '0.875rem 2.5rem',
+              padding: '0.625rem 1.75rem',
               background: 'linear-gradient(135deg, #ff9d00 0%, #ffb347 100%)',
               color: '#fff',
               textDecoration: 'none',
               borderRadius: '50px',
               fontWeight: '600',
-              fontSize: '1.1rem',
+              fontSize: '0.95rem',
               boxShadow: '0 4px 15px rgba(255, 157, 0, 0.4)',
               transition: 'all 0.3s ease',
               alignItems: 'center',
@@ -235,7 +235,7 @@ const Footer = () => (
         </div>
       </div>
       
-      <div className="footer-bottom" style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.2)', textAlign: 'center' }}>
+      <div className="footer-bottom" style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.2)', textAlign: 'center' }}>
         <p style={{ color: '#ccc', marginBottom: '0.5rem' }}>© 2026 Department of Tourism, Government of East Godavari. All rights reserved.</p>
         <p style={{ color: '#999', fontSize: '0.9rem' }}>Website designed and developed by East Godavari Tourism</p>
       </div>
