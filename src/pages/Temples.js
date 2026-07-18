@@ -96,7 +96,7 @@ const Temples = () => {
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
-                <div className="spirituality-card-explore-btn" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFB347)' }}>
+                <div className="spirituality-card-explore-btn">
                   <span>Explore</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
