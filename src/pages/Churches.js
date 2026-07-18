@@ -37,30 +37,7 @@ const Churches = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="spirituality-hero churches-hero">
-        <div className="spirituality-hero-bg"></div>
-        <div className="spirituality-hero-overlay"></div>
-        <div className="container">
-          <div className="spirituality-hero-content">
-            <div className="spirituality-hero-badge fade-in">
-              <span>⛪</span> Churches
-            </div>
-            <h1 className="fade-in">
-              Havens of <span className="hero-highlight" style={{ background: 'linear-gradient(135deg, #4A90D9, #7BB3E0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Peace & Grace</span>
-            </h1>
-            <div className="spirituality-quote fade-in">
-              <div className="quote-mark quote-mark-top" style={{ color: '#4A90D9', opacity: 0.3 }}>"</div>
-              <p className="quote-text">
-                Discover the beautifull churches of East Godavari, where stunning architecture and peaceful sanctuaries offer solace to the soul. A testament to the region's rich Christian heritage.
-              </p>
-              <div className="quote-mark quote-mark-bottom" style={{ color: '#4A90D9', opacity: 0.3 }}>"</div>
-            </div>
-            <Link to="/spirituality" className="spirituality-back-link fade-in" style={{ color: '#4A90D9' }}>
-              ← Back to Spirituality
-            </Link>
-          </div>
-        </div>
-      </section>
+   
 
       {/* Cards Section */}
       <section className="spirituality-items-section" style={{ background: '#EBF5FF' }}>
