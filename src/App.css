@@ -82,7 +82,7 @@
       }
 
       .header.header-scrolled {
-        background: linear-gradient(135deg, #943727 0%, #943727 50%, #943727 100%);
+        background: linear-gradient(135deg, #224474 0%, #224474 50%, #224474 100%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         box-shadow: 
@@ -183,6 +183,110 @@
          }
        }
 
+       /* Mobile row: Minister - Logo - CM */
+       .header-mobile-row {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 8px;                
+    width: 100%;
+    padding: 4px 8px;
+}
+       .header-mobile-row .header-cm-mobile {
+         
+         
+            display: flex;
+              flex-direction: column;
+          align-items: center;
+           gap: 0.15rem;
+          flex: 0.5;
+            margin-left: 1.6rem;
+       }
+       .header-mobile-row .header-minister-mobile {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.1rem;
+         flex: 0.5;
+         margin-left: -1.9rem;
+       }
+
+       .header-mobile-row .header-title-block-mobile {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 0.1rem;
+         flex: 1.5;
+         margin-left: -5.5rem;
+       }
+
+       .header-mobile-row .header-emblem {
+         height: 20px;
+         width: auto;
+         object-fit: contain;
+       }
+
+       .header-mobile-row .header-title {
+         font-size: 0.55rem;
+         font-weight: 700;
+         color: #f6f6f6;
+         margin: 0;
+         line-height: 1.1;
+         text-align: center;
+       }
+
+       .header-mobile-row .header-subtitle-mobile {
+         font-size: 0.32rem;
+         font-weight: 600;
+         color: rgba(255, 255, 255, 0.8);
+         line-height: 1.2;
+         text-align: center;
+         white-space: nowrap;
+       }
+
+       .header-mobile-row .header-cm-text,
+       .header-mobile-row .header-minister-name {
+         font-size: 0.4rem;
+         font-weight: 700;
+         color: #fff;
+         white-space: nowrap;
+       }
+
+       .header-mobile-row .header-cm-subtitle,
+       .header-mobile-row .header-minister-title {
+         font-size: 0.35rem;
+         font-weight: 600;
+         color: rgba(255, 255, 255, 0.8);
+     
+       }
+
+       .header-mobile-row .header-cm-img,
+       .header-mobile-row .header-minister-img {
+         width: 22px;
+         height: 22px;
+         object-fit: cover;
+         border-radius: 50%;
+         border: 1px solid rgba(255, 255, 255, 0.6);
+         background: rgba(255, 255, 255, 0.1);
+       }
+
+       @media (min-width: 48em) {
+         .header-mobile-row {
+           display: none;
+         }
+       }
+
+       @media (max-width: 767px) {
+         .header-mobile-row {
+           display: flex !important;
+         }
+       }
+
+       .header-mobile-row .header-cm-mobile { order: 1; }
+       .header-mobile-row .header-title-block-mobile { order: 2; }
+       .header-mobile-row .header-minister-mobile { order: 3; }
+
        .header-center-content {
          display: flex;
          flex-direction: row;
@@ -221,6 +325,64 @@
            left: 25rem;
          }
        }
+
+       /* Show Minister - Logo - CM on mobile */
+       .header-officials-mobile {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 0.75rem;
+         padding: 0.5rem;
+         margin-top: -2.5rem;
+       }
+
+       .header-officials-mobile .header-minister {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.25rem;
+         order: 3;
+       }
+
+       .header-officials-mobile .header-title-block-mobile {
+         order: 2;
+         margin: 0;
+       }
+
+       .header-officials-mobile .header-cm {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.25rem;
+         order: 1;
+       }
+
+       .header-officials-mobile .header-cm-img,
+       .header-officials-mobile .header-minister-img {
+         width: 32px;
+         height: 32px;
+         object-fit: cover;
+         border-radius: 50%;
+         border: 1px solid rgba(255, 255, 255, 0.6);
+         background: rgba(255, 255, 255, 0.1);
+       }
+
+       .header-officials-mobile .header-cm-text,
+       .header-officials-mobile .header-minister-name {
+         font-size: 0.55rem;
+         font-weight: 700;
+         color: #fff;
+         white-space: nowrap;
+       }
+
+       .header-officials-mobile .header-cm-subtitle,
+       .header-officials-mobile .header-minister-title {
+         font-size: 0.45rem;
+         font-weight: 600;
+         color: rgba(255, 255, 255, 0.8);
+         white-space: nowrap;
+       }
+
 
        .header-cm-img {
          width: 52px;
@@ -578,34 +740,43 @@
         color: #943727;
       }
 
-      /* Hamburger */
-      .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 36px;
-        height: 36px;
-        background: transparent;
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        border-radius: 4px;
-        cursor: pointer;
-        gap: 4px;
-        padding: 4px;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 101;
-      }
+       /* Hamburger */
+       .hamburger-menu {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 36px;
+         height: 36px;
+         background: transparent;
+         border: 2px solid rgba(255, 255, 255, 0.6);
+         border-radius: 4px;
+         cursor: pointer;
+         gap: 4px;
+         padding: 4px;
+         transition: all 0.3s ease;
+         position: absolute;
+         right: 1rem;
+         top: 50%;
+         transform: translateY(-50%);
+         z-index: 101;
+       }
 
       .header.header-scrolled .hamburger-menu {
         border-color: rgba(0, 0, 0, 0.3);
       }
 
-      @media (min-width: 48em) {
-        .hamburger-menu {
-          display: none;
-        }
-      }
+       @media (min-width: 48em) {
+         .hamburger-menu {
+           display: none;
+         }
+       }
+
+       @media (min-width: 64em) {
+         .hamburger-menu {
+           right: 2rem;
+         }
+       }
 
       .hamburger-menu span {
         display: block;
@@ -636,18 +807,20 @@
       .header-nav.nav-open {
         display: flex;
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 1rem;
+        right: 1rem;
         width: 280px;
-        height: 100vh;
-        background: #1a1a2e;
+        height: auto;
+        max-height: calc(100vh - 2rem);
+        background: #ffffff;
         flex-direction: column;
         align-items: flex-start;
-        padding: 5rem 1.5rem 2rem;
+        padding: 5rem 1.5rem 1.5rem;
         z-index: 100;
-        border: none;
-        backdrop-filter: none;
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        border-radius: 1rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        border: 1px solid rgba(0, 0, 0, 0.08);
       }
 
       .header-nav.nav-open .header-nav-list {
@@ -658,10 +831,20 @@
       }
 
       .header-nav.nav-open .header-nav-link {
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 0.95rem;
-        padding: 0.75rem 0;
-        width: 100%;
+         color: #000000;
+         font-size: 0.95rem;
+         padding: 0.875rem 1rem;
+         width: 100%;
+         border-radius: 0.5rem;
+         background: rgba(255, 255, 255, 0.8);
+         margin-bottom: 0.25rem;
+         transition: none;
+       }
+
+      .header-nav.nav-open .header-nav-link:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: #000000;
+        transform: none;
       }
 
       .header-nav.nav-open .header-nav-link::after {
