@@ -605,6 +605,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+      }
+
+      .header-social-btn img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .header-social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 30px;
         height: 30px;
         border-radius: 50%;
