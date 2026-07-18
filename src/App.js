@@ -118,16 +118,16 @@ const Header = () => {
 
 // ============ FOOTER ============
 const Footer = () => (
-  <footer className="footer" style={{ background: 'linear-gradient(135deg, #090909 0%, #4e1e1e 100%)', padding: '4rem 0 2rem' }}>
+  <footer className="footer" style={{ background: 'linear-gradient(135deg, #090909 0%, #4e1e1e 100%)', padding: '2rem 0 1rem' }}>
     <div className="container">
       <div style={{ 
         textAlign: 'center', 
-        padding: '2.5rem 2rem',
+        padding: '1.5rem 1.5rem',
         background: 'rgba(122, 31, 31, 0)',
         borderRadius: '0.5rem',
         backdropFilter: 'blur(10px)',
         maxWidth: '1000px',
-        margin: '0 auto 2rem'
+        margin: '0 auto 1rem'
       }}>
         <h3 style={{ 
           color: '#fff', 
@@ -154,7 +154,7 @@ const Footer = () => (
           display: 'flex', 
           justifyContent: 'center', 
           gap: '3rem', 
-          marginBottom: '2.5rem',
+          marginBottom: '1.5rem',
           flexWrap: 'wrap'
         }}>
           <div>
@@ -219,7 +219,7 @@ const Footer = () => (
         </div>
       </div>
       
-      <div className="footer-bottom" style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.2)', textAlign: 'center' }}>
+      <div className="footer-bottom" style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.2)', textAlign: 'center' }}>
         <p style={{ color: '#ccc', marginBottom: '0.5rem' }}>© 2026 Department of Tourism, Government of East Godavari. All rights reserved.</p>
         <p style={{ color: '#999', fontSize: '0.9rem' }}>Website designed and developed by East Godavari Tourism</p>
       </div>

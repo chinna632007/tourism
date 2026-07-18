@@ -1799,7 +1799,8 @@
      .footer {
        background: #000000;
        color: white;
-       padding: 3rem 0;
+       height: auto;
+       padding: 1.25rem 0 0.75rem;
      }
 
 
@@ -1831,8 +1832,8 @@
 
      .footer-bottom {
        border-top: 1px solid #333;
-       margin-top: -47px;
-       padding-top: 1.5rem;
+       margin-top: 1rem;
+       padding-top: 1rem;
        text-align: center;
        font-size: 0.85rem;
        color: white;
@@ -1841,12 +1842,12 @@
      /* Mobile Footer Adjustments */
      @media (max-width: 768px) {
        .footer {
-         padding: 2rem 0;
+         padding: 1rem 0 0.75rem;
        }
 
        .footer-bottom {
-         margin-top: 0;
-         padding-top: 1rem;
+         margin-top: 0.75rem;
+         padding-top: 0.75rem;
        }
      }
 
