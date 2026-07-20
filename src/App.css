@@ -1,6 +1,9 @@
      :root {
        --kt-colors-black: #000000;
        --kt-colors-white: #FFFFFF;
+       --kt-colors-transparent: rgba(0, 0, 0, 0);
+       --kt-colors-blackAlpha-100: rgba(0, 0, 0, 0.5);
+       --kt-colors-whiteAlpha-50: rgba(255, 255, 255, 0.5);
        --kt-colors-russian-100: #4F5051;
        --kt-colors-russian-900: #232426;
        --kt-colors-orangePeel-900: #FF9D00;
@@ -187,28 +190,19 @@
        .header-mobile-row {
     display: flex;
     justify-content: center; 
-    align-items: flex-start;
-    gap: 8px;                
+    align-items: center;
+    gap: 6px;                
     width: 100%;
     padding: 4px 8px;
 }
+
        .header-mobile-row .header-cm-mobile {
-         
-         
-            display: flex;
-              flex-direction: column;
-          align-items: center;
-           gap: 0.15rem;
-          flex: 0.5;
-            margin-left: 1.6rem;
-       }
-       .header-mobile-row .header-minister-mobile {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         gap: 0.1rem;
-         flex: 0.5;
-         margin-left: -1.9rem;
+             display: flex;
+               flex-direction: column;
+           align-items: center;
+            gap: 0.12rem;
+           flex: 0.4;
+             margin-left: 0.5rem;
        }
 
        .header-mobile-row .header-title-block-mobile {
@@ -216,9 +210,18 @@
          flex-direction: column;
          align-items: center;
          justify-content: center;
+         gap: 0.15rem;
+         flex: 1.2;
+         margin-left: 0.3rem;
+       }
+
+       .header-mobile-row .header-minister-mobile {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
          gap: 0.1rem;
-         flex: 1.5;
-         margin-left: -5.5rem;
+         flex: 0.6;
+         margin-left: -2.15rem;
        }
 
        .header-mobile-row .header-emblem {
@@ -760,17 +763,17 @@
          flex-direction: column;
          justify-content: center;
          align-items: center;
-         width: 36px;
-         height: 36px;
+         width: 28px;
+         height: 28px;
          background: transparent;
-         border: 2px solid rgba(255, 255, 255, 0.6);
-         border-radius: 4px;
+         border: 1.5px solid rgba(255, 255, 255, 0.6);
+         border-radius: 3px;
          cursor: pointer;
-         gap: 4px;
-         padding: 4px;
+         gap: 3px;
+         padding: 3px;
          transition: all 0.3s ease;
          position: absolute;
-         right: 1rem;
+         right: 0.75rem;
          top: 50%;
          transform: translateY(-50%);
          z-index: 101;
@@ -794,8 +797,8 @@
 
       .hamburger-menu span {
         display: block;
-        width: 18px;
-        height: 2px;
+        width: 14px;
+        height: 1.5px;
         background: #100e0e;
         border-radius: 1px;
         transition: all 0.3s ease;
@@ -806,7 +809,7 @@
       }
 
       .hamburger-menu.active span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
       }
 
       .hamburger-menu.active span:nth-child(2) {
@@ -814,25 +817,25 @@
       }
 
       .hamburger-menu.active span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-5px) rotate(-45deg);
       }
 
       /* Mobile nav */
       .header-nav.nav-open {
         display: flex;
         position: fixed;
-        top: 1rem;
-        right: 1rem;
-        width: 280px;
+        top: 0.6rem;
+        right: 0.6rem;
+        width: 240px;
         height: auto;
-        max-height: calc(100vh - 2rem);
+        max-height: calc(100vh - 1.2rem);
         background: #ffffff;
         flex-direction: column;
         align-items: flex-start;
-        padding: 5rem 1.5rem 1.5rem;
+        padding: 4rem 1rem 1rem;
         z-index: 100;
-        border-radius: 1rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0.6rem;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
         overflow-y: auto;
         border: 1px solid rgba(0, 0, 0, 0.08);
       }
@@ -846,12 +849,12 @@
 
       .header-nav.nav-open .header-nav-link {
          color: #000000;
-         font-size: 0.95rem;
-         padding: 0.875rem 1rem;
+         font-size: 0.85rem;
+         padding: 0.6rem 0.75rem;
          width: 100%;
-         border-radius: 0.5rem;
+         border-radius: 0.4rem;
          background: rgba(255, 255, 255, 0.8);
-         margin-bottom: 0.25rem;
+         margin-bottom: 0.15rem;
          transition: none;
        }
 
