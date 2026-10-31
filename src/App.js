@@ -82,7 +82,7 @@ const Header = () => {
             <div className="header-title-block">
               <img src="/aplogo.webp" alt="East Godavari Tourism" className="header-emblem" />
               <h1 className="header-title">East Godavari Tourism</h1>
-              <p className="header-subtitle">Department of Tourism, Government of Andhra Pradesh</p>
+              <p className="header-subtitle">Department of Tourism, Government of Ap</p>
             </div>
           </div>
 
